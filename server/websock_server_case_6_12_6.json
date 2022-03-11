@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0x80bf80bf80",
    "droppedByMe": false,
-   "duration": 0,
+   "duration": 1,
    "expectation": "The connection is failed immediately, since the payload is not valid UTF-8.",
    "expected": {
       "OK": []
@@ -22,8 +22,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: b9qMkqdQdlWHfJvsNng4HQ==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Thu, 23 Sep 2021 11:49:45 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: LhkWJTG9Eb7R1N1GQW6CtUVNvxE=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: X1zuHUzZCteumEvxM1ThFg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 11 Mar 2022 20:51:53 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: OsHPLzn49sZDTO+CqjrbLJ/d4S0=\r\n\r\n",
    "id": "6.12.6",
    "isServer": false,
    "localCloseCode": null,
@@ -39,7 +39,7 @@
    "rxOctetStats": {
       "166": 1
    },
-   "started": "2021-09-23T11:49:45.878Z",
+   "started": "2022-03-11T20:51:53.674Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1
@@ -66,7 +66,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205468752c2032332053657020323032312031313a34393a34 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203131204d617220323032322032303a35313a35 ..."
          ]
       ],
       [
@@ -78,7 +78,7 @@
          1,
          true,
          0,
-         "d4590e7e",
+         "b3c4add0",
          null,
          null,
          false
@@ -87,7 +87,7 @@
          "TO",
          [
             11,
-            "8185d4590e7e54e68ec154"
+            "8185b3c4add0337b2d6f33"
          ],
          false
       ],
