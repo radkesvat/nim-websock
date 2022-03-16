@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send ping with binary payload of 125 octets, send in octet-wise chops.",
    "droppedByMe": true,
-   "duration": 9,
+   "duration": 14,
    "expectation": "Pong with payload echo'ed is sent in reply to Ping. Implementations must be TCP clean. Clean close with normal code.",
    "expected": {
       "OK": [
@@ -26,8 +26,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=22&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: Bx5pbhOswmjiyoAGZdgo5g==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: Z+Llck6Z0THGOVzUG/7DqTZWXQI=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=22&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: hR/SE3o4kt6DTQcNUsxgMg==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: Ii9Jo49qSm5RPjQ2ekYn2VJeygk=\r\n\r\n",
    "id": "2.6",
    "isServer": true,
    "localCloseCode": 1000,
@@ -53,7 +53,7 @@
       "131": 1,
       "294": 1
    },
-   "started": "2022-03-11T21:56:26.968Z",
+   "started": "2022-03-16T02:52:26.926Z",
    "trafficStats": null,
    "txFrameStats": {
       "8": 1,
@@ -1123,7 +1123,7 @@
          "RO",
          [
             131,
-            "8afdfbc056ce053ea830053ea830053ea830053ea830053ea830053ea830053ea830053ea830053ea830053ea830053ea830053ea830053ea830053ea830053e ..."
+            "8afd47ce56feb930a800b930a800b930a800b930a800b930a800b930a800b930a800b930a800b930a800b930a800b930a800b930a800b930a800b930a800b930 ..."
          ]
       ],
       [
@@ -1136,7 +1136,7 @@
          true,
          0,
          true,
-         "fbc056ce"
+         "47ce56fe"
       ],
       [
          "TF",
@@ -1164,7 +1164,7 @@
          "RO",
          [
             8,
-            "8882df033e59dceb"
+            "8882ca99a16ec971"
          ]
       ],
       [
@@ -1177,7 +1177,7 @@
          true,
          0,
          true,
-         "df033e59"
+         "ca99a16e"
       ]
    ]
 }

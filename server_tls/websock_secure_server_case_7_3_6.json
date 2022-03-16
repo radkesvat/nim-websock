@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send a close frame with close code and close reason which is too long (124) - total frame payload 126 octets",
    "droppedByMe": false,
-   "duration": 1,
+   "duration": 0,
    "expectation": "Clean close with protocol error code or dropped TCP connection.",
    "expected": {
       "OK": []
@@ -21,8 +21,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: DfM+Cqk/MQzyTZpqq+ruvg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 11 Mar 2022 21:04:32 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: t9OkmxOzx7XEUva6BpTvcEwlJ88=\r\n\r\n",
+   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: u7r8DQxIPlyS4nUtEmhCuA==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 16 Mar 2022 02:52:46 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: Br3NqdmocJcsz3QfZrFviqzvJV8=\r\n\r\n",
    "id": "7.3.6",
    "isServer": false,
    "localCloseCode": 1000,
@@ -38,7 +38,7 @@
    "rxOctetStats": {
       "166": 1
    },
-   "started": "2022-03-11T21:04:32.859Z",
+   "started": "2022-03-16T02:52:46.673Z",
    "trafficStats": null,
    "txFrameStats": {
       "8": 1
@@ -65,7 +65,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203131204d617220323032322032313a30343a33 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c203136204d617220323032322030323a35323a34 ..."
          ]
       ],
       [
@@ -77,7 +77,7 @@
          8,
          true,
          0,
-         "e3976ebd",
+         "540e0742",
          null,
          null,
          false
@@ -86,7 +86,7 @@
          "TO",
          [
             134,
-            "88fe007ee3976ebde07f4497c9bd4497c9bd4497c9bd4497c9bd4497c9bd4497c9bd4497c9bd4497c9bd4497c9bd4497c9bd4497c9bd4497c9bd4497c9bd4497 ..."
+            "88fe007e540e074257e62d687e242d687e242d687e242d687e242d687e242d687e242d687e242d687e242d687e242d687e242d687e242d687e242d687e242d68 ..."
          ],
          false
       ],
