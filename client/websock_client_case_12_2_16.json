@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 1024 octets. Use default permessage-deflate offer.",
    "droppedByMe": true,
-   "duration": 19905,
+   "duration": 25008,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=335&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: ZXgdbUzwunydlAPMDi7NEA==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: yUoKQQvO4smU65cj7IuQyad6sCM=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
+   "httpRequest": "GET /runCase?case=335&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: ChvNIY/EqOtLD7fqxbHpGQ==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: HM3vuXYH5cNRHN9mOzQ3G+RGgzw=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
    "id": "12.2.16",
    "isServer": true,
    "localCloseCode": 1000,
@@ -105,7 +105,7 @@
       "42810": 1,
       "42821": 2,
       "42822": 1,
-      "42824": 2,
+      "42824": 1,
       "42826": 1,
       "42830": 2,
       "42833": 1,
@@ -123,7 +123,7 @@
       "42873": 2,
       "42875": 1,
       "42876": 2,
-      "42877": 1,
+      "42877": 2,
       "42882": 2,
       "42883": 1,
       "42885": 1,
@@ -383,9 +383,9 @@
       "44310": 1,
       "44370": 1,
       "44382": 1,
-      "44439": 1,
       "44453": 1,
       "44473": 1,
+      "44492": 1,
       "44496": 1,
       "44533": 1,
       "44555": 1,
@@ -632,7 +632,6 @@
       "48404": 1,
       "48410": 1,
       "48411": 1,
-      "48412": 1,
       "48415": 1,
       "48421": 1,
       "48423": 1,
@@ -645,6 +644,7 @@
       "48444": 1,
       "48451": 2,
       "48462": 1,
+      "48465": 1,
       "48469": 1,
       "48473": 1,
       "48474": 1,
@@ -782,7 +782,7 @@
       "49008": 1,
       "49009": 1,
       "49010": 1,
-      "49011": 2,
+      "49011": 1,
       "49012": 3,
       "49013": 4,
       "49014": 2,
@@ -805,7 +805,7 @@
       "49035": 2,
       "49036": 1,
       "49037": 4,
-      "49038": 2,
+      "49038": 1,
       "49039": 2,
       "49041": 2,
       "49043": 3,
@@ -821,7 +821,7 @@
       "49054": 1,
       "49056": 1,
       "49061": 1,
-      "49064": 2,
+      "49064": 3,
       "49065": 1,
       "49066": 1,
       "49067": 1,
@@ -829,7 +829,6 @@
       "49070": 1,
       "49071": 1,
       "49072": 2,
-      "49075": 1,
       "49076": 1,
       "49078": 2,
       "49079": 2,
@@ -839,6 +838,7 @@
       "49084": 1,
       "49089": 2,
       "49090": 2,
+      "49091": 1,
       "49092": 2,
       "49093": 2,
       "49096": 2,
@@ -852,10 +852,12 @@
       "49114": 1,
       "49117": 2,
       "49120": 1,
+      "49128": 1,
       "49230": 1,
-      "65536": 1000
+      "65483": 6,
+      "65536": 994
    },
-   "started": "2022-03-16T02:57:21.066Z",
+   "started": "2022-04-08T11:24:11.761Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.8504757537841797,
       "incomingOctetsAppLevel": 131072000,
@@ -1540,7 +1542,7 @@
          "RO",
          [
             8,
-            "88821dc860181e20"
+            "88822f5d3baa2cb5"
          ]
       ],
       [
@@ -1553,7 +1555,7 @@
          true,
          0,
          true,
-         "1dc86018"
+         "2f5d3baa"
       ]
    ]
 }

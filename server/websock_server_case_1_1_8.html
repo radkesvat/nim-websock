@@ -202,7 +202,7 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSocket Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSocket Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSocket">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSocket">                 </img></a></center>
       <br/>
-      <p class="case case_ok">websock server - <span style="font-size: 1.3em;"><b>Case 1.1.8</b></span> : Pass - <span style="font-size: 0.9em;"><b>48</b> ms @ 2022-03-16T02:52:51.407Z</a></p>
+      <p class="case case_ok">websock server - <span style="font-size: 1.3em;"><b>Case 1.1.8</b></span> : Pass - <span style="font-size: 0.9em;"><b>32</b> ms @ 2022-04-08T09:42:02.926Z</a></p>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send text message message with payload of length 65536. Sent out data in chops of 997 octets.</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed text message (with payload as sent). Clean close with normal code.</p>
 
@@ -221,13 +221,13 @@ Upgrade: WebSocket
 Connection: Upgrade
 Pragma: no-cache
 Cache-Control: no-cache
-Sec-WebSocket-Key: vAlGpR4bYQrUpjmDZUv7Gg==
+Sec-WebSocket-Key: eIxj9SkMbUgrL8VQUPwNLg==
 Sec-WebSocket-Version: 13</pre>
       <pre class="http_dump">HTTP/1.1 101 Switching Protocols
-Date: Wed, 16 Mar 2022 02:52:51 GMT
+Date: Fri, 08 Apr 2022 09:42:02 GMT
 Upgrade: websocket
 Connection: Upgrade
-Sec-Websocket-Accept: +OtQ8puh9PrXcFC/bPzoF8OvxIY=</pre>
+Sec-Websocket-Accept: 1kLhQ8ekDgEsQk0RzNX2/yAAZXk=</pre>
       <br/><hr/>
       <h2>Closing Behavior</h2>
       <table>
@@ -253,8 +253,8 @@ Sec-Websocket-Accept: +OtQ8puh9PrXcFC/bPzoF8OvxIY=</pre>
          <tr class="stats_row"><td>4</td><td>1</td><td>4</td></tr>
          <tr class="stats_row"><td>10</td><td>1</td><td>10</td></tr>
          <tr class="stats_row"><td>166</td><td>1</td><td>166</td></tr>
-         <tr class="stats_row"><td>65536</td><td>1</td><td>65536</td></tr>
-         <tr class="stats_total"><td>Total</td><td>4</td><td>65716</td></tr>
+         <tr class="stats_row"><td>32768</td><td>2</td><td>65536</td></tr>
+         <tr class="stats_total"><td>Total</td><td>5</td><td>65716</td></tr>
       </table>
       <h3>Octets Transmitted by Chop Size</h3>
       <table>
@@ -284,155 +284,157 @@ Sec-Websocket-Accept: +OtQ8puh9PrXcFC/bPzoF8OvxIY=</pre>
       <div id="wirelog">
          <pre class="wirelog_tx_octets">000 TX OCTETS: 474554202f777320485454502f312e310d0a557365722d4167656e743a204175746f6261686e5465737453756974652f302e</pre>
          <pre class="wirelog_tx_octets">               382e322d302e31302e390d0a486f ...</pre>
-         <pre class="wirelog_rx_octets">001 RX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c203136204d61</pre>
-         <pre class="wirelog_rx_octets">               7220323032322030323a35323a35 ...</pre>
-         <pre class="wirelog_tx_frame_sync">002 TX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=65536, MASK=35efacb9, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=997, SYNC=False</pre>
+         <pre class="wirelog_rx_octets">001 RX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203038204170</pre>
+         <pre class="wirelog_rx_octets">               7220323032322030393a34323a30 ...</pre>
+         <pre class="wirelog_tx_frame_sync">002 TX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=65536, MASK=1f4a6d47, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=997, SYNC=False</pre>
          <pre class="wirelog_tx_frame_sync">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets_sync">003 TX OCTETS: 81ff000000000001000035efacb91fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
+         <pre class="wirelog_tx_octets_sync">003 TX OCTETS: 81ff00000000000100001f4a6d473560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
          <pre class="wirelog_kill_after">004 FAIL CONNECTION AFTER 10.000000 sec</pre>
-         <pre class="wirelog_tx_octets_sync">005 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">006 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">007 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">008 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">009 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">010 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">011 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">012 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">013 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">014 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">015 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">016 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">017 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">018 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">019 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">020 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">021 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">022 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">023 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">024 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">025 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">026 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">027 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">028 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">029 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">030 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">031 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">032 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">033 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">034 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">035 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">036 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">037 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">038 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">039 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">040 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">041 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">042 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">043 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">044 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">045 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">046 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">047 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">048 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">049 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">050 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">051 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">052 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">053 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">054 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">055 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">056 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">057 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">058 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">059 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">060 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">061 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">062 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">063 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">064 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">065 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
-         <pre class="wirelog_tx_octets_sync">066 TX OCTETS: 1fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc5</pre>
-         <pre class="wirelog_tx_octets_sync">               86931fc586931fc586931fc58693 ...</pre>
-         <pre class="wirelog_tx_octets_sync">067 TX OCTETS: c586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586</pre>
-         <pre class="wirelog_tx_octets_sync">               931fc586931fc586931fc586931f ...</pre>
-         <pre class="wirelog_tx_octets_sync">068 TX OCTETS: 86931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc58693</pre>
-         <pre class="wirelog_tx_octets_sync">               1fc586931fc586931fc586931fc5 ...</pre>
-         <pre class="wirelog_tx_octets_sync">069 TX OCTETS: 931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931fc586931f</pre>
-         <pre class="wirelog_tx_octets_sync">               c586931fc586931fc586931fc586 ...</pre>
+         <pre class="wirelog_tx_octets_sync">005 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">006 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">007 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">008 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">009 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">010 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">011 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">012 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">013 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">014 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">015 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">016 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">017 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">018 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">019 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">020 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">021 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">022 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">023 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">024 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">025 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">026 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">027 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">028 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">029 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">030 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">031 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">032 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">033 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">034 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">035 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">036 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">037 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">038 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">039 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">040 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">041 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">042 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">043 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">044 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">045 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">046 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">047 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">048 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">049 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">050 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">051 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">052 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">053 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">054 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">055 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">056 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">057 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">058 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">059 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">060 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">061 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">062 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">063 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">064 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">065 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
+         <pre class="wirelog_tx_octets_sync">066 TX OCTETS: 3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560</pre>
+         <pre class="wirelog_tx_octets_sync">               476d3560476d3560476d3560476d ...</pre>
+         <pre class="wirelog_tx_octets_sync">067 TX OCTETS: 60476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d356047</pre>
+         <pre class="wirelog_tx_octets_sync">               6d3560476d3560476d3560476d35 ...</pre>
+         <pre class="wirelog_tx_octets_sync">068 TX OCTETS: 476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d</pre>
+         <pre class="wirelog_tx_octets_sync">               3560476d3560476d3560476d3560 ...</pre>
+         <pre class="wirelog_tx_octets_sync">069 TX OCTETS: 6d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d3560476d35</pre>
+         <pre class="wirelog_tx_octets_sync">               60476d3560476d3560476d356047 ...</pre>
          <pre class="wirelog_rx_octets">070 RX OCTETS: 817f00000000000100002a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a</pre>
          <pre class="wirelog_rx_octets">               2a2a2a2a2a2a2a2a2a2a2a2a2a2a ...</pre>
-         <pre class="wirelog_rx_octets">071 RX OCTETS: 2a2a2a2a2a2a2a2a2a2a</pre>
-         <pre class="wirelog_rx_frame">072 RX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=65536, MASKED=False, MASK=None</pre>
+         <pre class="wirelog_rx_octets">071 RX OCTETS: 2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a</pre>
+         <pre class="wirelog_rx_octets">               2a2a2a2a2a2a2a2a2a2a2a2a2a2a ...</pre>
+         <pre class="wirelog_rx_octets">072 RX OCTETS: 2a2a2a2a2a2a2a2a2a2a</pre>
+         <pre class="wirelog_rx_frame">073 RX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=65536, MASKED=False, MASK=None</pre>
          <pre class="wirelog_rx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_frame">073 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASK=6eea94a6, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_frame">074 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASK=2f0ae678, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               0x03e8</pre>
-         <pre class="wirelog_tx_octets">074 TX OCTETS: 88826eea94a66d02</pre>
-         <pre class="wirelog_rx_octets">075 RX OCTETS: 880203e8</pre>
-         <pre class="wirelog_rx_frame">076 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=False, MASK=None</pre>
+         <pre class="wirelog_tx_octets">075 TX OCTETS: 88822f0ae6782ce2</pre>
+         <pre class="wirelog_rx_octets">076 RX OCTETS: 880203e8</pre>
+         <pre class="wirelog_rx_frame">077 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=False, MASK=None</pre>
          <pre class="wirelog_rx_frame">               0x03e8</pre>
-         <pre class="wirelog_tcp_closed_by_peer">077 TCP DROPPED BY PEER</pre>
+         <pre class="wirelog_tcp_closed_by_peer">078 TCP DROPPED BY PEER</pre>
       </div>
       <br/><hr/>
    </body>

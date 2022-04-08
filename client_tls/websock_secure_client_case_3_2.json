@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send small text message, then send again with <b>RSV = 2</b>, then send Ping.",
    "droppedByMe": false,
-   "duration": 2,
+   "duration": 1,
    "expectation": "Echo for first message is received, but then connection is failed immediately, since RSV must be 0, when no extension defining RSV meaning has been negotiated. The Pong is not received.",
    "expected": {
       "NON-STRICT": [],
@@ -28,8 +28,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=29&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: mRqPPJGDCcY5loGoE+cJGg==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: +D420P9xiYduglgmZOM0xBfAkz0=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=29&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: eqpsbsFTsSeb85SdOXjrLw==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: 4K088ktv017BvEBmp32k3KIj1mc=\r\n\r\n",
    "id": "3.2",
    "isServer": true,
    "localCloseCode": null,
@@ -54,7 +54,7 @@
       "19": 1,
       "294": 1
    },
-   "started": "2022-03-16T02:52:27.052Z",
+   "started": "2022-04-08T12:05:53.998Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 2,
@@ -160,7 +160,7 @@
          "RO",
          [
             19,
-            "818d449c88180cf9e4742bb0a86f2beee47c65"
+            "818d6f66426a27032e06004a621d00142e0e4e"
          ]
       ],
       [
@@ -173,7 +173,7 @@
          true,
          0,
          true,
-         "449c8818"
+         "6f66426a"
       ]
    ]
 }

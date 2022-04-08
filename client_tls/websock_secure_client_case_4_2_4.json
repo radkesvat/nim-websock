@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send small text message, then send frame with reserved control <b>Opcode = 14</b> and non-empty payload, then send Ping.",
    "droppedByMe": false,
-   "duration": 2,
+   "duration": 1,
    "expectation": "Echo for first message is received, but then connection is failed immediately, since reserved opcode frame is used. A Pong is not received.",
    "expected": {
       "NON-STRICT": [],
@@ -28,8 +28,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=43&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: IkDaS7d/CJBmTFnxZkOI/A==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: D6VqNkNA/sc8zdGIvIKvTyWQhmw=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=43&agent=websock-secure-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9002\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: ZvY0C6sM1U8GIUO1QcF3EQ==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: OYwxVj8NBcBqrWWJTXx8Tz+KW7k=\r\n\r\n",
    "id": "4.2.4",
    "isServer": true,
    "localCloseCode": null,
@@ -54,7 +54,7 @@
       "19": 1,
       "294": 1
    },
-   "started": "2022-03-16T02:52:27.130Z",
+   "started": "2022-04-08T12:05:54.054Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1,
@@ -161,7 +161,7 @@
          "RO",
          [
             19,
-            "818d1a498b5c522ce7307565ab2b753be7383b"
+            "818dda046bea92610786b5284b9db576078efb"
          ]
       ],
       [
@@ -174,7 +174,7 @@
          true,
          0,
          true,
-         "1a498b5c"
+         "da046bea"
       ]
    ]
 }

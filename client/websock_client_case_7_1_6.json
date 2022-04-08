@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 256K message followed by close then a ping",
    "droppedByMe": true,
-   "duration": 76,
+   "duration": 91,
    "expectation": "Case outcome depends on implementation defined close behavior. Message and close frame are sent back to back. If the close frame is processed before the text message write is complete (as can happen in asynchronous processing models) the close frame is processed first and the text message may not be received or may only be partially recieved.",
    "expected": {
       "NON-STRICT": [],
@@ -28,8 +28,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=215&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: 5hp0TxLWxC+JdNYuWY0lrA==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: uxA9u6VUubAI7AWAKMAd2GjgeTg=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=215&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: O+5o655TAz1+/Yoxk2SA1g==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: tliSqMvCSdCKZgLfQBwR2ZRiDGw=\r\n\r\n",
    "id": "7.1.6",
    "isServer": true,
    "localCloseCode": 1000,
@@ -61,7 +61,7 @@
       "288": 1,
       "65536": 4
    },
-   "started": "2022-03-16T02:50:53.000Z",
+   "started": "2022-04-08T11:16:10.299Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 2,
@@ -192,35 +192,35 @@
          "RO",
          [
             65536,
-            "81ff000000000004000078b8c1aa3af9b2ce4f9eabc24a8b83eb0bdcf68c12d0f3993af9b2ce4f9eabc24a8b83eb0bdcf68c12d0f3993af9b2ce4f9eabc24a8b ..."
+            "81ff0000000000040000adac1a22efed69469a8a704a9f9f5863dec82d04c7c42811efed69469a8a704a9f9f5863dec82d04c7c42811efed69469a8a704a9f9f ..."
          ]
       ],
       [
          "RO",
          [
             65536,
-            "b2ce4f9eabc24a8b83eb0bdcf68c12d0f3993af9b2ce4f9eabc24a8b83eb0bdcf68c12d0f3993af9b2ce4f9eabc24a8b83eb0bdcf68c12d0f3993af9b2ce4f9e ..."
+            "69469a8a704a9f9f5863dec82d04c7c42811efed69469a8a704a9f9f5863dec82d04c7c42811efed69469a8a704a9f9f5863dec82d04c7c42811efed69469a8a ..."
          ]
       ],
       [
          "RO",
          [
             65536,
-            "f3993af9b2ce4f9eabc24a8b83eb0bdcf68c12d0f3993af9b2ce4f9eabc24a8b83eb0bdcf68c12d0f3993af9b2ce4f9eabc24a8b83eb0bdcf68c12d0f3993af9 ..."
+            "2811efed69469a8a704a9f9f5863dec82d04c7c42811efed69469a8a704a9f9f5863dec82d04c7c42811efed69469a8a704a9f9f5863dec82d04c7c42811efed ..."
          ]
       ],
       [
          "RO",
          [
             65536,
-            "f68c12d0f3993af9b2ce4f9eabc24a8b83eb0bdcf68c12d0f3993af9b2ce4f9eabc24a8b83eb0bdcf68c12d0f3993af9b2ce4f9eabc24a8b83eb0bdcf68c12d0 ..."
+            "2d04c7c42811efed69469a8a704a9f9f5863dec82d04c7c42811efed69469a8a704a9f9f5863dec82d04c7c42811efed69469a8a704a9f9f5863dec82d04c7c4 ..."
          ]
       ],
       [
          "RO",
          [
             40,
-            "83eb0bdcf68c12d0f3993af9b2ce818c05d0aec44db5c2a86af0f9ab77bccae58882a67f4e3ca597"
+            "5863dec82d04c7c42811efed6946818ce7c0afc2afa5c3ae88e0f8ad95accbe38882724af3da71a2"
          ]
       ],
       [
@@ -233,7 +233,7 @@
          true,
          0,
          true,
-         "78b8c1aa"
+         "adac1a22"
       ],
       [
          "RF",
@@ -245,7 +245,7 @@
          true,
          0,
          true,
-         "05d0aec4"
+         "e7c0afc2"
       ],
       [
          "RF",
@@ -257,7 +257,7 @@
          true,
          0,
          true,
-         "a67f4e3c"
+         "724af3da"
       ]
    ]
 }
