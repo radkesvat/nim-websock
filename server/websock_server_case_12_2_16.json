@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 1024 octets. Use default permessage-deflate offer.",
    "droppedByMe": false,
-   "duration": 20126,
+   "duration": 24656,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: ZbPisdP8DFs7erPmfC1+Lw==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 08 Apr 2022 09:48:46 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: 4WxuHOjBU27+moJ/5xEsSPebRr4=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: R+JVprHQ7n0zp0GZUYaysQ==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 18 May 2022 07:05:45 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: sp2ZVgxsLAMM6JwfmK9D0Z9VjfA=\r\n\r\n",
    "id": "12.2.16",
    "isServer": false,
    "localCloseCode": 1000,
@@ -175,7 +175,7 @@
       "43008": 1,
       "43013": 1,
       "43015": 1,
-      "43047": 1,
+      "43047": 2,
       "43054": 1,
       "43059": 1,
       "43069": 1,
@@ -187,11 +187,11 @@
       "43095": 2,
       "43096": 1,
       "43099": 1,
-      "43100": 1,
       "43111": 1,
       "43115": 1,
       "43117": 1,
       "43123": 2,
+      "43143": 1,
       "43145": 1,
       "43146": 1,
       "43150": 1,
@@ -202,7 +202,6 @@
       "43186": 2,
       "43188": 2,
       "43193": 1,
-      "43196": 1,
       "43207": 1,
       "43211": 2,
       "43215": 1,
@@ -386,8 +385,8 @@
       "44378": 1,
       "44435": 1,
       "44449": 1,
-      "44469": 1,
       "44492": 1,
+      "44522": 1,
       "44529": 1,
       "44551": 1,
       "44554": 1,
@@ -681,6 +680,8 @@
       "48552": 1,
       "48554": 1,
       "48555": 1,
+      "48558": 1,
+      "48560": 1,
       "48561": 2,
       "48562": 1,
       "48566": 1,
@@ -706,9 +707,7 @@
       "48608": 2,
       "48609": 2,
       "48610": 1,
-      "48611": 1,
       "48612": 1,
-      "48613": 1,
       "48616": 3,
       "48620": 1,
       "48621": 1,
@@ -854,10 +853,10 @@
       "49113": 2,
       "49116": 1,
       "49226": 1,
-      "65483": 4,
-      "65536": 996
+      "65483": 1,
+      "65536": 999
    },
-   "started": "2022-04-08T09:48:46.850Z",
+   "started": "2022-05-18T07:05:45.101Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.8504757537841797,
       "incomingOctetsAppLevel": 131072000,
@@ -1499,7 +1498,7 @@
          "RO",
          [
             240,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c2030382041707220323032322030393a34383a34 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c203138204d617920323032322030373a30353a34 ..."
          ]
       ],
       [
@@ -1523,7 +1522,7 @@
          8,
          true,
          0,
-         "47612f05",
+         "674b344d",
          null,
          null,
          false
@@ -1532,7 +1531,7 @@
          "TO",
          [
             8,
-            "888247612f054489"
+            "8882674b344d64a3"
          ],
          false
       ],

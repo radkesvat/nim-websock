@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 256 octets. Use default permessage-deflate offer.",
    "droppedByMe": false,
-   "duration": 27186,
+   "duration": 32725,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 3my/0LlYdPbWcCN8QdcJLA==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 08 Apr 2022 09:48:19 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: 7PP+i5S+9DzkdOMZS0V3c8or+qg=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: WBoL3DEHhRgHwOZE0jR8CA==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 18 May 2022 07:05:12 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: vTOfg+N09voEjeyODxke+rcKrPg=\r\n\r\n",
    "id": "12.2.15",
    "isServer": false,
    "localCloseCode": 1000,
@@ -106,7 +106,6 @@
       "42817": 2,
       "42818": 1,
       "42820": 2,
-      "42822": 1,
       "42826": 2,
       "42829": 1,
       "42830": 2,
@@ -124,6 +123,7 @@
       "42871": 1,
       "42872": 2,
       "42873": 1,
+      "42875": 1,
       "42878": 2,
       "42879": 1,
       "42881": 1,
@@ -224,7 +224,6 @@
       "43287": 1,
       "43291": 1,
       "43297": 1,
-      "43302": 1,
       "43304": 1,
       "43308": 1,
       "43310": 1,
@@ -244,6 +243,7 @@
       "43347": 2,
       "43351": 1,
       "43352": 2,
+      "43355": 1,
       "43357": 1,
       "43363": 1,
       "43365": 2,
@@ -627,7 +627,7 @@
       "48385": 1,
       "48390": 1,
       "48392": 1,
-      "48396": 2,
+      "48396": 1,
       "48397": 1,
       "48400": 1,
       "48406": 1,
@@ -644,6 +644,7 @@
       "48438": 1,
       "48440": 1,
       "48447": 2,
+      "48449": 1,
       "48458": 1,
       "48465": 1,
       "48469": 1,
@@ -751,11 +752,11 @@
       "48828": 1,
       "48851": 1,
       "48861": 1,
-      "48865": 1,
       "48885": 1,
       "48886": 1,
       "48891": 1,
       "48894": 1,
+      "48918": 1,
       "48921": 1,
       "48924": 1,
       "48937": 1,
@@ -853,9 +854,10 @@
       "49113": 2,
       "49116": 1,
       "49226": 1,
-      "65536": 1000
+      "65483": 4,
+      "65536": 996
    },
-   "started": "2022-04-08T09:48:19.663Z",
+   "started": "2022-05-18T07:05:12.375Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.8504757537841797,
       "incomingOctetsAppLevel": 131072000,
@@ -1153,7 +1155,7 @@
          "RO",
          [
             240,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c2030382041707220323032322030393a34383a31 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c203138204d617920323032322030373a30353a31 ..."
          ]
       ],
       [
@@ -1177,7 +1179,7 @@
          8,
          true,
          0,
-         "5777cb94",
+         "00371bad",
          null,
          null,
          false
@@ -1186,7 +1188,7 @@
          "TO",
          [
             8,
-            "88825777cb94549f"
+            "888200371bad03df"
          ],
          false
       ],
