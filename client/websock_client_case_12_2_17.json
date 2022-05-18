@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 4096 octets. Use default permessage-deflate offer.",
    "droppedByMe": true,
-   "duration": 20688,
+   "duration": 24405,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=336&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: 014717cx/fqr3Xm0Yruv6A==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: O1svvMeCHOmrIzyP6kyq6YFKLfM=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
+   "httpRequest": "GET /runCase?case=336&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: PID7bkGUWn7Z4Z9EFNi/Zg==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: 9I44zCNuU5NC7shDcKFZ5Z6zZRU=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
    "id": "12.2.17",
    "isServer": true,
    "localCloseCode": 1000,
@@ -268,7 +268,7 @@
       "43420": 1,
       "43421": 1,
       "43423": 1,
-      "43424": 1,
+      "43424": 2,
       "43426": 2,
       "43429": 1,
       "43431": 1,
@@ -293,7 +293,7 @@
       "43463": 1,
       "43469": 1,
       "43474": 1,
-      "43477": 3,
+      "43477": 2,
       "43479": 1,
       "43482": 1,
       "43483": 1,
@@ -460,10 +460,10 @@
       "45996": 2,
       "46011": 1,
       "46015": 1,
-      "46051": 1,
       "46061": 1,
       "46084": 1,
       "46093": 1,
+      "46104": 1,
       "46108": 1,
       "46130": 1,
       "46136": 1,
@@ -600,6 +600,7 @@
       "48264": 1,
       "48273": 1,
       "48274": 1,
+      "48278": 1,
       "48279": 1,
       "48290": 1,
       "48291": 2,
@@ -611,7 +612,6 @@
       "48319": 1,
       "48324": 1,
       "48329": 1,
-      "48331": 1,
       "48333": 2,
       "48334": 1,
       "48342": 1,
@@ -622,7 +622,6 @@
       "48370": 1,
       "48372": 1,
       "48378": 1,
-      "48379": 1,
       "48385": 1,
       "48389": 1,
       "48394": 1,
@@ -639,6 +638,7 @@
       "48424": 1,
       "48427": 1,
       "48428": 1,
+      "48432": 1,
       "48434": 1,
       "48435": 1,
       "48442": 1,
@@ -677,6 +677,7 @@
       "48546": 2,
       "48552": 1,
       "48555": 2,
+      "48556": 1,
       "48558": 1,
       "48559": 1,
       "48562": 1,
@@ -702,7 +703,6 @@
       "48597": 1,
       "48603": 1,
       "48608": 1,
-      "48609": 1,
       "48611": 1,
       "48612": 2,
       "48613": 2,
@@ -797,7 +797,7 @@
       "49025": 3,
       "49026": 3,
       "49027": 2,
-      "49029": 2,
+      "49029": 1,
       "49030": 2,
       "49031": 3,
       "49033": 2,
@@ -831,10 +831,11 @@
       "49072": 2,
       "49075": 1,
       "49076": 1,
-      "49078": 1,
+      "49078": 2,
       "49079": 2,
       "49080": 1,
       "49081": 1,
+      "49082": 1,
       "49083": 2,
       "49084": 1,
       "49089": 2,
@@ -852,12 +853,11 @@
       "49114": 1,
       "49117": 2,
       "49120": 1,
-      "49131": 1,
       "49230": 1,
-      "65483": 4,
-      "65536": 996
+      "65483": 3,
+      "65536": 997
    },
-   "started": "2022-05-18T07:06:59.295Z",
+   "started": "2022-05-18T08:17:45.012Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.8504757537841797,
       "incomingOctetsAppLevel": 131072000,
@@ -1731,7 +1731,7 @@
          "RO",
          [
             8,
-            "8882475a5dc144b2"
+            "8882405a157b43b2"
          ]
       ],
       [
@@ -1744,7 +1744,7 @@
          true,
          0,
          true,
-         "475a5dc1"
+         "405a157b"
       ]
    ]
 }
