@@ -202,7 +202,7 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSocket Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSocket Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSocket">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSocket">                 </img></a></center>
       <br/>
-      <p class="case case_ok">websock secure server - <span style="font-size: 1.3em;"><b>Case 10.1.1</b></span> : Pass - <span style="font-size: 0.9em;"><b>39</b> ms @ 2022-05-18T08:06:33.150Z</a></p>
+      <p class="case case_ok">websock secure server - <span style="font-size: 1.3em;"><b>Case 10.1.1</b></span> : Pass - <span style="font-size: 0.9em;"><b>32</b> ms @ 2022-05-18T13:25:27.740Z</a></p>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send text message with payload of length 65536 auto-fragmented with <b>autoFragmentSize = 1300</b>.</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed text message (with payload as sent and transmitted frame counts as expected). Clean close with normal code.</p>
 
@@ -221,13 +221,13 @@ Upgrade: WebSocket
 Connection: Upgrade
 Pragma: no-cache
 Cache-Control: no-cache
-Sec-WebSocket-Key: PjzkYKNBnpfBZhgzdxhrbQ==
+Sec-WebSocket-Key: SAAYf3rc9MCHV/QaGp0trw==
 Sec-WebSocket-Version: 13</pre>
       <pre class="http_dump">HTTP/1.1 101 Switching Protocols
-Date: Wed, 18 May 2022 08:06:33 GMT
+Date: Wed, 18 May 2022 13:25:27 GMT
 Upgrade: websocket
 Connection: Upgrade
-Sec-Websocket-Accept: s8LVLeK0+HO8zclX0oJIyEfhYI4=</pre>
+Sec-Websocket-Accept: fXRQoeNj7ThQ5hCTTLkYgsLur+I=</pre>
       <br/><hr/>
       <h2>Closing Behavior</h2>
       <table>
@@ -286,211 +286,211 @@ Sec-Websocket-Accept: s8LVLeK0+HO8zclX0oJIyEfhYI4=</pre>
          <pre class="wirelog_tx_octets">000 TX OCTETS: 474554202f77737320485454502f312e310d0a557365722d4167656e743a204175746f6261686e5465737453756974652f30</pre>
          <pre class="wirelog_tx_octets">               2e382e322d302e31302e390d0a48 ...</pre>
          <pre class="wirelog_rx_octets">001 RX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c203138204d61</pre>
-         <pre class="wirelog_rx_octets">               7920323032322030383a30363a33 ...</pre>
-         <pre class="wirelog_tx_frame">002 TX FRAME : OPCODE=1, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=69618498, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_rx_octets">               7920323032322031333a32353a32 ...</pre>
+         <pre class="wirelog_tx_frame">002 TX FRAME : OPCODE=1, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=4339da39, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">003 TX OCTETS: 01fe051469618498434baeb2434baeb2434baeb2434baeb2434baeb2434baeb2434baeb2434baeb2434baeb2434baeb2434b</pre>
-         <pre class="wirelog_tx_octets">               aeb2434baeb2434baeb2434baeb2 ...</pre>
-         <pre class="wirelog_tx_frame">004 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=86cc44d0, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">003 TX OCTETS: 01fe05144339da396913f0136913f0136913f0136913f0136913f0136913f0136913f0136913f0136913f0136913f0136913</pre>
+         <pre class="wirelog_tx_octets">               f0136913f0136913f0136913f013 ...</pre>
+         <pre class="wirelog_tx_frame">004 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=185fe5ad, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">005 TX OCTETS: 00fe051486cc44d0ace66efaace66efaace66efaace66efaace66efaace66efaace66efaace66efaace66efaace66efaace6</pre>
-         <pre class="wirelog_tx_octets">               6efaace66efaace66efaace66efa ...</pre>
-         <pre class="wirelog_tx_frame">006 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=0fa7e3e8, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">005 TX OCTETS: 00fe0514185fe5ad3275cf873275cf873275cf873275cf873275cf873275cf873275cf873275cf873275cf873275cf873275</pre>
+         <pre class="wirelog_tx_octets">               cf873275cf873275cf873275cf87 ...</pre>
+         <pre class="wirelog_tx_frame">006 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=f9d34a90, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">007 TX OCTETS: 00fe05140fa7e3e8258dc9c2258dc9c2258dc9c2258dc9c2258dc9c2258dc9c2258dc9c2258dc9c2258dc9c2258dc9c2258d</pre>
-         <pre class="wirelog_tx_octets">               c9c2258dc9c2258dc9c2258dc9c2 ...</pre>
-         <pre class="wirelog_tx_frame">008 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=ad304a15, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">007 TX OCTETS: 00fe0514f9d34a90d3f960bad3f960bad3f960bad3f960bad3f960bad3f960bad3f960bad3f960bad3f960bad3f960bad3f9</pre>
+         <pre class="wirelog_tx_octets">               60bad3f960bad3f960bad3f960ba ...</pre>
+         <pre class="wirelog_tx_frame">008 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=67830f84, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">009 TX OCTETS: 00fe0514ad304a15871a603f871a603f871a603f871a603f871a603f871a603f871a603f871a603f871a603f871a603f871a</pre>
-         <pre class="wirelog_tx_octets">               603f871a603f871a603f871a603f ...</pre>
-         <pre class="wirelog_tx_frame">010 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=619e226b, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">009 TX OCTETS: 00fe051467830f844da925ae4da925ae4da925ae4da925ae4da925ae4da925ae4da925ae4da925ae4da925ae4da925ae4da9</pre>
+         <pre class="wirelog_tx_octets">               25ae4da925ae4da925ae4da925ae ...</pre>
+         <pre class="wirelog_tx_frame">010 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=ec06a48a, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">011 TX OCTETS: 00fe0514619e226b4bb408414bb408414bb408414bb408414bb408414bb408414bb408414bb408414bb408414bb408414bb4</pre>
-         <pre class="wirelog_tx_octets">               08414bb408414bb408414bb40841 ...</pre>
-         <pre class="wirelog_tx_frame">012 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=985c9ab9, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">011 TX OCTETS: 00fe0514ec06a48ac62c8ea0c62c8ea0c62c8ea0c62c8ea0c62c8ea0c62c8ea0c62c8ea0c62c8ea0c62c8ea0c62c8ea0c62c</pre>
+         <pre class="wirelog_tx_octets">               8ea0c62c8ea0c62c8ea0c62c8ea0 ...</pre>
+         <pre class="wirelog_tx_frame">012 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=ef5ada0d, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">013 TX OCTETS: 00fe0514985c9ab9b276b093b276b093b276b093b276b093b276b093b276b093b276b093b276b093b276b093b276b093b276</pre>
-         <pre class="wirelog_tx_octets">               b093b276b093b276b093b276b093 ...</pre>
-         <pre class="wirelog_tx_frame">014 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=2edf2036, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">013 TX OCTETS: 00fe0514ef5ada0dc570f027c570f027c570f027c570f027c570f027c570f027c570f027c570f027c570f027c570f027c570</pre>
+         <pre class="wirelog_tx_octets">               f027c570f027c570f027c570f027 ...</pre>
+         <pre class="wirelog_tx_frame">014 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=66a425ad, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">015 TX OCTETS: 00fe05142edf203604f50a1c04f50a1c04f50a1c04f50a1c04f50a1c04f50a1c04f50a1c04f50a1c04f50a1c04f50a1c04f5</pre>
-         <pre class="wirelog_tx_octets">               0a1c04f50a1c04f50a1c04f50a1c ...</pre>
-         <pre class="wirelog_tx_frame">016 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=c70b28aa, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">015 TX OCTETS: 00fe051466a425ad4c8e0f874c8e0f874c8e0f874c8e0f874c8e0f874c8e0f874c8e0f874c8e0f874c8e0f874c8e0f874c8e</pre>
+         <pre class="wirelog_tx_octets">               0f874c8e0f874c8e0f874c8e0f87 ...</pre>
+         <pre class="wirelog_tx_frame">016 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=6e20e62a, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">017 TX OCTETS: 00fe0514c70b28aaed210280ed210280ed210280ed210280ed210280ed210280ed210280ed210280ed210280ed210280ed21</pre>
-         <pre class="wirelog_tx_octets">               0280ed210280ed210280ed210280 ...</pre>
-         <pre class="wirelog_tx_frame">018 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=c7e83aa4, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">017 TX OCTETS: 00fe05146e20e62a440acc00440acc00440acc00440acc00440acc00440acc00440acc00440acc00440acc00440acc00440a</pre>
+         <pre class="wirelog_tx_octets">               cc00440acc00440acc00440acc00 ...</pre>
+         <pre class="wirelog_tx_frame">018 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=49665994, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">019 TX OCTETS: 00fe0514c7e83aa4edc2108eedc2108eedc2108eedc2108eedc2108eedc2108eedc2108eedc2108eedc2108eedc2108eedc2</pre>
-         <pre class="wirelog_tx_octets">               108eedc2108eedc2108eedc2108e ...</pre>
-         <pre class="wirelog_tx_frame">020 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=919d2b6b, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">019 TX OCTETS: 00fe051449665994634c73be634c73be634c73be634c73be634c73be634c73be634c73be634c73be634c73be634c73be634c</pre>
+         <pre class="wirelog_tx_octets">               73be634c73be634c73be634c73be ...</pre>
+         <pre class="wirelog_tx_frame">020 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=e1bffca2, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">021 TX OCTETS: 00fe0514919d2b6bbbb70141bbb70141bbb70141bbb70141bbb70141bbb70141bbb70141bbb70141bbb70141bbb70141bbb7</pre>
-         <pre class="wirelog_tx_octets">               0141bbb70141bbb70141bbb70141 ...</pre>
-         <pre class="wirelog_tx_frame">022 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=da683959, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">021 TX OCTETS: 00fe0514e1bffca2cb95d688cb95d688cb95d688cb95d688cb95d688cb95d688cb95d688cb95d688cb95d688cb95d688cb95</pre>
+         <pre class="wirelog_tx_octets">               d688cb95d688cb95d688cb95d688 ...</pre>
+         <pre class="wirelog_tx_frame">022 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=1bb01ae3, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">023 TX OCTETS: 00fe0514da683959f0421373f0421373f0421373f0421373f0421373f0421373f0421373f0421373f0421373f0421373f042</pre>
-         <pre class="wirelog_tx_octets">               1373f0421373f0421373f0421373 ...</pre>
-         <pre class="wirelog_tx_frame">024 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=b35a7bd0, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">023 TX OCTETS: 00fe05141bb01ae3319a30c9319a30c9319a30c9319a30c9319a30c9319a30c9319a30c9319a30c9319a30c9319a30c9319a</pre>
+         <pre class="wirelog_tx_octets">               30c9319a30c9319a30c9319a30c9 ...</pre>
+         <pre class="wirelog_tx_frame">024 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=2afcd8f2, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">025 TX OCTETS: 00fe0514b35a7bd0997051fa997051fa997051fa997051fa997051fa997051fa997051fa997051fa997051fa997051fa9970</pre>
-         <pre class="wirelog_tx_octets">               51fa997051fa997051fa997051fa ...</pre>
-         <pre class="wirelog_tx_frame">026 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=6ad74134, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">025 TX OCTETS: 00fe05142afcd8f200d6f2d800d6f2d800d6f2d800d6f2d800d6f2d800d6f2d800d6f2d800d6f2d800d6f2d800d6f2d800d6</pre>
+         <pre class="wirelog_tx_octets">               f2d800d6f2d800d6f2d800d6f2d8 ...</pre>
+         <pre class="wirelog_tx_frame">026 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=11c0db21, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">027 TX OCTETS: 00fe05146ad7413440fd6b1e40fd6b1e40fd6b1e40fd6b1e40fd6b1e40fd6b1e40fd6b1e40fd6b1e40fd6b1e40fd6b1e40fd</pre>
-         <pre class="wirelog_tx_octets">               6b1e40fd6b1e40fd6b1e40fd6b1e ...</pre>
-         <pre class="wirelog_tx_frame">028 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=40eaaf2a, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">027 TX OCTETS: 00fe051411c0db213beaf10b3beaf10b3beaf10b3beaf10b3beaf10b3beaf10b3beaf10b3beaf10b3beaf10b3beaf10b3bea</pre>
+         <pre class="wirelog_tx_octets">               f10b3beaf10b3beaf10b3beaf10b ...</pre>
+         <pre class="wirelog_tx_frame">028 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=6bf2708f, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">029 TX OCTETS: 00fe051440eaaf2a6ac085006ac085006ac085006ac085006ac085006ac085006ac085006ac085006ac085006ac085006ac0</pre>
-         <pre class="wirelog_tx_octets">               85006ac085006ac085006ac08500 ...</pre>
-         <pre class="wirelog_tx_frame">030 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=9af7a0a2, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">029 TX OCTETS: 00fe05146bf2708f41d85aa541d85aa541d85aa541d85aa541d85aa541d85aa541d85aa541d85aa541d85aa541d85aa541d8</pre>
+         <pre class="wirelog_tx_octets">               5aa541d85aa541d85aa541d85aa5 ...</pre>
+         <pre class="wirelog_tx_frame">030 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=254293a4, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">031 TX OCTETS: 00fe05149af7a0a2b0dd8a88b0dd8a88b0dd8a88b0dd8a88b0dd8a88b0dd8a88b0dd8a88b0dd8a88b0dd8a88b0dd8a88b0dd</pre>
-         <pre class="wirelog_tx_octets">               8a88b0dd8a88b0dd8a88b0dd8a88 ...</pre>
-         <pre class="wirelog_tx_frame">032 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=7773fe0a, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">031 TX OCTETS: 00fe0514254293a40f68b98e0f68b98e0f68b98e0f68b98e0f68b98e0f68b98e0f68b98e0f68b98e0f68b98e0f68b98e0f68</pre>
+         <pre class="wirelog_tx_octets">               b98e0f68b98e0f68b98e0f68b98e ...</pre>
+         <pre class="wirelog_tx_frame">032 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=411ded83, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">033 TX OCTETS: 00fe05147773fe0a5d59d4205d59d4205d59d4205d59d4205d59d4205d59d4205d59d4205d59d4205d59d4205d59d4205d59</pre>
-         <pre class="wirelog_tx_octets">               d4205d59d4205d59d4205d59d420 ...</pre>
-         <pre class="wirelog_tx_frame">034 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=9fe2a871, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">033 TX OCTETS: 00fe0514411ded836b37c7a96b37c7a96b37c7a96b37c7a96b37c7a96b37c7a96b37c7a96b37c7a96b37c7a96b37c7a96b37</pre>
+         <pre class="wirelog_tx_octets">               c7a96b37c7a96b37c7a96b37c7a9 ...</pre>
+         <pre class="wirelog_tx_frame">034 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=3f991d40, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">035 TX OCTETS: 00fe05149fe2a871b5c8825bb5c8825bb5c8825bb5c8825bb5c8825bb5c8825bb5c8825bb5c8825bb5c8825bb5c8825bb5c8</pre>
-         <pre class="wirelog_tx_octets">               825bb5c8825bb5c8825bb5c8825b ...</pre>
-         <pre class="wirelog_tx_frame">036 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=877f24fa, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">035 TX OCTETS: 00fe05143f991d4015b3376a15b3376a15b3376a15b3376a15b3376a15b3376a15b3376a15b3376a15b3376a15b3376a15b3</pre>
+         <pre class="wirelog_tx_octets">               376a15b3376a15b3376a15b3376a ...</pre>
+         <pre class="wirelog_tx_frame">036 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=c36ec11a, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">037 TX OCTETS: 00fe0514877f24faad550ed0ad550ed0ad550ed0ad550ed0ad550ed0ad550ed0ad550ed0ad550ed0ad550ed0ad550ed0ad55</pre>
-         <pre class="wirelog_tx_octets">               0ed0ad550ed0ad550ed0ad550ed0 ...</pre>
-         <pre class="wirelog_tx_frame">038 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=3f864bea, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">037 TX OCTETS: 00fe0514c36ec11ae944eb30e944eb30e944eb30e944eb30e944eb30e944eb30e944eb30e944eb30e944eb30e944eb30e944</pre>
+         <pre class="wirelog_tx_octets">               eb30e944eb30e944eb30e944eb30 ...</pre>
+         <pre class="wirelog_tx_frame">038 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=d538dfb1, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">039 TX OCTETS: 00fe05143f864bea15ac61c015ac61c015ac61c015ac61c015ac61c015ac61c015ac61c015ac61c015ac61c015ac61c015ac</pre>
-         <pre class="wirelog_tx_octets">               61c015ac61c015ac61c015ac61c0 ...</pre>
-         <pre class="wirelog_tx_frame">040 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=57f5f7e7, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">039 TX OCTETS: 00fe0514d538dfb1ff12f59bff12f59bff12f59bff12f59bff12f59bff12f59bff12f59bff12f59bff12f59bff12f59bff12</pre>
+         <pre class="wirelog_tx_octets">               f59bff12f59bff12f59bff12f59b ...</pre>
+         <pre class="wirelog_tx_frame">040 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=412a04ea, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">041 TX OCTETS: 00fe051457f5f7e77ddfddcd7ddfddcd7ddfddcd7ddfddcd7ddfddcd7ddfddcd7ddfddcd7ddfddcd7ddfddcd7ddfddcd7ddf</pre>
-         <pre class="wirelog_tx_octets">               ddcd7ddfddcd7ddfddcd7ddfddcd ...</pre>
-         <pre class="wirelog_tx_frame">042 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=1f0de077, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">041 TX OCTETS: 00fe0514412a04ea6b002ec06b002ec06b002ec06b002ec06b002ec06b002ec06b002ec06b002ec06b002ec06b002ec06b00</pre>
+         <pre class="wirelog_tx_octets">               2ec06b002ec06b002ec06b002ec0 ...</pre>
+         <pre class="wirelog_tx_frame">042 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=dac1979c, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">043 TX OCTETS: 00fe05141f0de0773527ca5d3527ca5d3527ca5d3527ca5d3527ca5d3527ca5d3527ca5d3527ca5d3527ca5d3527ca5d3527</pre>
-         <pre class="wirelog_tx_octets">               ca5d3527ca5d3527ca5d3527ca5d ...</pre>
-         <pre class="wirelog_tx_frame">044 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=d2a0d6b6, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">043 TX OCTETS: 00fe0514dac1979cf0ebbdb6f0ebbdb6f0ebbdb6f0ebbdb6f0ebbdb6f0ebbdb6f0ebbdb6f0ebbdb6f0ebbdb6f0ebbdb6f0eb</pre>
+         <pre class="wirelog_tx_octets">               bdb6f0ebbdb6f0ebbdb6f0ebbdb6 ...</pre>
+         <pre class="wirelog_tx_frame">044 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=4c17dae8, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">045 TX OCTETS: 00fe0514d2a0d6b6f88afc9cf88afc9cf88afc9cf88afc9cf88afc9cf88afc9cf88afc9cf88afc9cf88afc9cf88afc9cf88a</pre>
-         <pre class="wirelog_tx_octets">               fc9cf88afc9cf88afc9cf88afc9c ...</pre>
-         <pre class="wirelog_tx_frame">046 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=1915b3cf, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">045 TX OCTETS: 00fe05144c17dae8663df0c2663df0c2663df0c2663df0c2663df0c2663df0c2663df0c2663df0c2663df0c2663df0c2663d</pre>
+         <pre class="wirelog_tx_octets">               f0c2663df0c2663df0c2663df0c2 ...</pre>
+         <pre class="wirelog_tx_frame">046 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=88a0aab3, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">047 TX OCTETS: 00fe05141915b3cf333f99e5333f99e5333f99e5333f99e5333f99e5333f99e5333f99e5333f99e5333f99e5333f99e5333f</pre>
-         <pre class="wirelog_tx_octets">               99e5333f99e5333f99e5333f99e5 ...</pre>
-         <pre class="wirelog_tx_frame">048 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=09a8a2ba, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">047 TX OCTETS: 00fe051488a0aab3a28a8099a28a8099a28a8099a28a8099a28a8099a28a8099a28a8099a28a8099a28a8099a28a8099a28a</pre>
+         <pre class="wirelog_tx_octets">               8099a28a8099a28a8099a28a8099 ...</pre>
+         <pre class="wirelog_tx_frame">048 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=581fabfb, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">049 TX OCTETS: 00fe051409a8a2ba238288902382889023828890238288902382889023828890238288902382889023828890238288902382</pre>
-         <pre class="wirelog_tx_octets">               8890238288902382889023828890 ...</pre>
-         <pre class="wirelog_tx_frame">050 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=370e1c93, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">049 TX OCTETS: 00fe0514581fabfb723581d1723581d1723581d1723581d1723581d1723581d1723581d1723581d1723581d1723581d17235</pre>
+         <pre class="wirelog_tx_octets">               81d1723581d1723581d1723581d1 ...</pre>
+         <pre class="wirelog_tx_frame">050 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=7f4420cb, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">051 TX OCTETS: 00fe0514370e1c931d2436b91d2436b91d2436b91d2436b91d2436b91d2436b91d2436b91d2436b91d2436b91d2436b91d24</pre>
-         <pre class="wirelog_tx_octets">               36b91d2436b91d2436b91d2436b9 ...</pre>
-         <pre class="wirelog_tx_frame">052 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=9aa227f5, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">051 TX OCTETS: 00fe05147f4420cb556e0ae1556e0ae1556e0ae1556e0ae1556e0ae1556e0ae1556e0ae1556e0ae1556e0ae1556e0ae1556e</pre>
+         <pre class="wirelog_tx_octets">               0ae1556e0ae1556e0ae1556e0ae1 ...</pre>
+         <pre class="wirelog_tx_frame">052 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=9854f60e, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">053 TX OCTETS: 00fe05149aa227f5b0880ddfb0880ddfb0880ddfb0880ddfb0880ddfb0880ddfb0880ddfb0880ddfb0880ddfb0880ddfb088</pre>
-         <pre class="wirelog_tx_octets">               0ddfb0880ddfb0880ddfb0880ddf ...</pre>
-         <pre class="wirelog_tx_frame">054 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=e2e975c8, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">053 TX OCTETS: 00fe05149854f60eb27edc24b27edc24b27edc24b27edc24b27edc24b27edc24b27edc24b27edc24b27edc24b27edc24b27e</pre>
+         <pre class="wirelog_tx_octets">               dc24b27edc24b27edc24b27edc24 ...</pre>
+         <pre class="wirelog_tx_frame">054 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=5f524811, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">055 TX OCTETS: 00fe0514e2e975c8c8c35fe2c8c35fe2c8c35fe2c8c35fe2c8c35fe2c8c35fe2c8c35fe2c8c35fe2c8c35fe2c8c35fe2c8c3</pre>
-         <pre class="wirelog_tx_octets">               5fe2c8c35fe2c8c35fe2c8c35fe2 ...</pre>
-         <pre class="wirelog_tx_frame">056 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=3fe1e7c1, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">055 TX OCTETS: 00fe05145f5248117578623b7578623b7578623b7578623b7578623b7578623b7578623b7578623b7578623b7578623b7578</pre>
+         <pre class="wirelog_tx_octets">               623b7578623b7578623b7578623b ...</pre>
+         <pre class="wirelog_tx_frame">056 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=be51bf7b, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">057 TX OCTETS: 00fe05143fe1e7c115cbcdeb15cbcdeb15cbcdeb15cbcdeb15cbcdeb15cbcdeb15cbcdeb15cbcdeb15cbcdeb15cbcdeb15cb</pre>
-         <pre class="wirelog_tx_octets">               cdeb15cbcdeb15cbcdeb15cbcdeb ...</pre>
-         <pre class="wirelog_tx_frame">058 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=d466e9ee, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">057 TX OCTETS: 00fe0514be51bf7b947b9551947b9551947b9551947b9551947b9551947b9551947b9551947b9551947b9551947b9551947b</pre>
+         <pre class="wirelog_tx_octets">               9551947b9551947b9551947b9551 ...</pre>
+         <pre class="wirelog_tx_frame">058 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=e13012b3, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">059 TX OCTETS: 00fe0514d466e9eefe4cc3c4fe4cc3c4fe4cc3c4fe4cc3c4fe4cc3c4fe4cc3c4fe4cc3c4fe4cc3c4fe4cc3c4fe4cc3c4fe4c</pre>
-         <pre class="wirelog_tx_octets">               c3c4fe4cc3c4fe4cc3c4fe4cc3c4 ...</pre>
-         <pre class="wirelog_tx_frame">060 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=312b1d5f, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">059 TX OCTETS: 00fe0514e13012b3cb1a3899cb1a3899cb1a3899cb1a3899cb1a3899cb1a3899cb1a3899cb1a3899cb1a3899cb1a3899cb1a</pre>
+         <pre class="wirelog_tx_octets">               3899cb1a3899cb1a3899cb1a3899 ...</pre>
+         <pre class="wirelog_tx_frame">060 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=57276ab4, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">061 TX OCTETS: 00fe0514312b1d5f1b0137751b0137751b0137751b0137751b0137751b0137751b0137751b0137751b0137751b0137751b01</pre>
-         <pre class="wirelog_tx_octets">               37751b0137751b0137751b013775 ...</pre>
-         <pre class="wirelog_tx_frame">062 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=25d0671a, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">061 TX OCTETS: 00fe051457276ab47d0d409e7d0d409e7d0d409e7d0d409e7d0d409e7d0d409e7d0d409e7d0d409e7d0d409e7d0d409e7d0d</pre>
+         <pre class="wirelog_tx_octets">               409e7d0d409e7d0d409e7d0d409e ...</pre>
+         <pre class="wirelog_tx_frame">062 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=ba5e1940, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">063 TX OCTETS: 00fe051425d0671a0ffa4d300ffa4d300ffa4d300ffa4d300ffa4d300ffa4d300ffa4d300ffa4d300ffa4d300ffa4d300ffa</pre>
-         <pre class="wirelog_tx_octets">               4d300ffa4d300ffa4d300ffa4d30 ...</pre>
-         <pre class="wirelog_tx_frame">064 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=fb41e00c, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">063 TX OCTETS: 00fe0514ba5e19409074336a9074336a9074336a9074336a9074336a9074336a9074336a9074336a9074336a9074336a9074</pre>
+         <pre class="wirelog_tx_octets">               336a9074336a9074336a9074336a ...</pre>
+         <pre class="wirelog_tx_frame">064 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=2efe5bb8, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">065 TX OCTETS: 00fe0514fb41e00cd16bca26d16bca26d16bca26d16bca26d16bca26d16bca26d16bca26d16bca26d16bca26d16bca26d16b</pre>
-         <pre class="wirelog_tx_octets">               ca26d16bca26d16bca26d16bca26 ...</pre>
-         <pre class="wirelog_tx_frame">066 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=6e03ae93, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">065 TX OCTETS: 00fe05142efe5bb804d4719204d4719204d4719204d4719204d4719204d4719204d4719204d4719204d4719204d4719204d4</pre>
+         <pre class="wirelog_tx_octets">               719204d4719204d4719204d47192 ...</pre>
+         <pre class="wirelog_tx_frame">066 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=e131e038, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">067 TX OCTETS: 00fe05146e03ae93442984b9442984b9442984b9442984b9442984b9442984b9442984b9442984b9442984b9442984b94429</pre>
-         <pre class="wirelog_tx_octets">               84b9442984b9442984b9442984b9 ...</pre>
-         <pre class="wirelog_tx_frame">068 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=3ce16b63, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">067 TX OCTETS: 00fe0514e131e038cb1bca12cb1bca12cb1bca12cb1bca12cb1bca12cb1bca12cb1bca12cb1bca12cb1bca12cb1bca12cb1b</pre>
+         <pre class="wirelog_tx_octets">               ca12cb1bca12cb1bca12cb1bca12 ...</pre>
+         <pre class="wirelog_tx_frame">068 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=bd0b28af, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">069 TX OCTETS: 00fe05143ce16b6316cb414916cb414916cb414916cb414916cb414916cb414916cb414916cb414916cb414916cb414916cb</pre>
-         <pre class="wirelog_tx_octets">               414916cb414916cb414916cb4149 ...</pre>
-         <pre class="wirelog_tx_frame">070 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=cb83ac34, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">069 TX OCTETS: 00fe0514bd0b28af972102859721028597210285972102859721028597210285972102859721028597210285972102859721</pre>
+         <pre class="wirelog_tx_octets">               0285972102859721028597210285 ...</pre>
+         <pre class="wirelog_tx_frame">070 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=ef800338, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">071 TX OCTETS: 00fe0514cb83ac34e1a9861ee1a9861ee1a9861ee1a9861ee1a9861ee1a9861ee1a9861ee1a9861ee1a9861ee1a9861ee1a9</pre>
-         <pre class="wirelog_tx_octets">               861ee1a9861ee1a9861ee1a9861e ...</pre>
-         <pre class="wirelog_tx_frame">072 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=0bdb0c6e, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">071 TX OCTETS: 00fe0514ef800338c5aa2912c5aa2912c5aa2912c5aa2912c5aa2912c5aa2912c5aa2912c5aa2912c5aa2912c5aa2912c5aa</pre>
+         <pre class="wirelog_tx_octets">               2912c5aa2912c5aa2912c5aa2912 ...</pre>
+         <pre class="wirelog_tx_frame">072 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=ba036153, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">073 TX OCTETS: 00fe05140bdb0c6e21f1264421f1264421f1264421f1264421f1264421f1264421f1264421f1264421f1264421f1264421f1</pre>
-         <pre class="wirelog_tx_octets">               264421f1264421f1264421f12644 ...</pre>
-         <pre class="wirelog_tx_frame">074 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=20447a6f, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">073 TX OCTETS: 00fe0514ba03615390294b7990294b7990294b7990294b7990294b7990294b7990294b7990294b7990294b7990294b799029</pre>
+         <pre class="wirelog_tx_octets">               4b7990294b7990294b7990294b79 ...</pre>
+         <pre class="wirelog_tx_frame">074 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=8e26ecdb, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">075 TX OCTETS: 00fe051420447a6f0a6e50450a6e50450a6e50450a6e50450a6e50450a6e50450a6e50450a6e50450a6e50450a6e50450a6e</pre>
-         <pre class="wirelog_tx_octets">               50450a6e50450a6e50450a6e5045 ...</pre>
-         <pre class="wirelog_tx_frame">076 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=639d7202, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">075 TX OCTETS: 00fe05148e26ecdba40cc6f1a40cc6f1a40cc6f1a40cc6f1a40cc6f1a40cc6f1a40cc6f1a40cc6f1a40cc6f1a40cc6f1a40c</pre>
+         <pre class="wirelog_tx_octets">               c6f1a40cc6f1a40cc6f1a40cc6f1 ...</pre>
+         <pre class="wirelog_tx_frame">076 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=817723d7, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">077 TX OCTETS: 00fe0514639d720249b7582849b7582849b7582849b7582849b7582849b7582849b7582849b7582849b7582849b7582849b7</pre>
-         <pre class="wirelog_tx_octets">               582849b7582849b7582849b75828 ...</pre>
-         <pre class="wirelog_tx_frame">078 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=ffcfabac, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">077 TX OCTETS: 00fe0514817723d7ab5d09fdab5d09fdab5d09fdab5d09fdab5d09fdab5d09fdab5d09fdab5d09fdab5d09fdab5d09fdab5d</pre>
+         <pre class="wirelog_tx_octets">               09fdab5d09fdab5d09fdab5d09fd ...</pre>
+         <pre class="wirelog_tx_frame">078 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=26a5f200, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">079 TX OCTETS: 00fe0514ffcfabacd5e58186d5e58186d5e58186d5e58186d5e58186d5e58186d5e58186d5e58186d5e58186d5e58186d5e5</pre>
-         <pre class="wirelog_tx_octets">               8186d5e58186d5e58186d5e58186 ...</pre>
-         <pre class="wirelog_tx_frame">080 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=687a7fdd, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">079 TX OCTETS: 00fe051426a5f2000c8fd82a0c8fd82a0c8fd82a0c8fd82a0c8fd82a0c8fd82a0c8fd82a0c8fd82a0c8fd82a0c8fd82a0c8f</pre>
+         <pre class="wirelog_tx_octets">               d82a0c8fd82a0c8fd82a0c8fd82a ...</pre>
+         <pre class="wirelog_tx_frame">080 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=dceb7f70, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">081 TX OCTETS: 00fe0514687a7fdd425055f7425055f7425055f7425055f7425055f7425055f7425055f7425055f7425055f7425055f74250</pre>
-         <pre class="wirelog_tx_octets">               55f7425055f7425055f7425055f7 ...</pre>
-         <pre class="wirelog_tx_frame">082 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=93e2166b, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">081 TX OCTETS: 00fe0514dceb7f70f6c1555af6c1555af6c1555af6c1555af6c1555af6c1555af6c1555af6c1555af6c1555af6c1555af6c1</pre>
+         <pre class="wirelog_tx_octets">               555af6c1555af6c1555af6c1555a ...</pre>
+         <pre class="wirelog_tx_frame">082 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=e3293f6d, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">083 TX OCTETS: 00fe051493e2166bb9c83c41b9c83c41b9c83c41b9c83c41b9c83c41b9c83c41b9c83c41b9c83c41b9c83c41b9c83c41b9c8</pre>
-         <pre class="wirelog_tx_octets">               3c41b9c83c41b9c83c41b9c83c41 ...</pre>
-         <pre class="wirelog_tx_frame">084 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=987842b1, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">083 TX OCTETS: 00fe0514e3293f6dc9031547c9031547c9031547c9031547c9031547c9031547c9031547c9031547c9031547c9031547c903</pre>
+         <pre class="wirelog_tx_octets">               1547c9031547c9031547c9031547 ...</pre>
+         <pre class="wirelog_tx_frame">084 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=4d08ad27, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">085 TX OCTETS: 00fe0514987842b1b252689bb252689bb252689bb252689bb252689bb252689bb252689bb252689bb252689bb252689bb252</pre>
-         <pre class="wirelog_tx_octets">               689bb252689bb252689bb252689b ...</pre>
-         <pre class="wirelog_tx_frame">086 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=19069273, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">085 TX OCTETS: 00fe05144d08ad276722870d6722870d6722870d6722870d6722870d6722870d6722870d6722870d6722870d6722870d6722</pre>
+         <pre class="wirelog_tx_octets">               870d6722870d6722870d6722870d ...</pre>
+         <pre class="wirelog_tx_frame">086 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=4b8fb7d1, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">087 TX OCTETS: 00fe051419069273332cb859332cb859332cb859332cb859332cb859332cb859332cb859332cb859332cb859332cb859332c</pre>
-         <pre class="wirelog_tx_octets">               b859332cb859332cb859332cb859 ...</pre>
-         <pre class="wirelog_tx_frame">088 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=9b4991b1, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">087 TX OCTETS: 00fe05144b8fb7d161a59dfb61a59dfb61a59dfb61a59dfb61a59dfb61a59dfb61a59dfb61a59dfb61a59dfb61a59dfb61a5</pre>
+         <pre class="wirelog_tx_octets">               9dfb61a59dfb61a59dfb61a59dfb ...</pre>
+         <pre class="wirelog_tx_frame">088 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=aba0fb6c, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">089 TX OCTETS: 00fe05149b4991b1b163bb9bb163bb9bb163bb9bb163bb9bb163bb9bb163bb9bb163bb9bb163bb9bb163bb9bb163bb9bb163</pre>
-         <pre class="wirelog_tx_octets">               bb9bb163bb9bb163bb9bb163bb9b ...</pre>
-         <pre class="wirelog_tx_frame">090 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=d324e56d, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">089 TX OCTETS: 00fe0514aba0fb6c818ad146818ad146818ad146818ad146818ad146818ad146818ad146818ad146818ad146818ad146818a</pre>
+         <pre class="wirelog_tx_octets">               d146818ad146818ad146818ad146 ...</pre>
+         <pre class="wirelog_tx_frame">090 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=84ab60c2, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">091 TX OCTETS: 00fe0514d324e56df90ecf47f90ecf47f90ecf47f90ecf47f90ecf47f90ecf47f90ecf47f90ecf47f90ecf47f90ecf47f90e</pre>
-         <pre class="wirelog_tx_octets">               cf47f90ecf47f90ecf47f90ecf47 ...</pre>
-         <pre class="wirelog_tx_frame">092 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=6af84582, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">091 TX OCTETS: 00fe051484ab60c2ae814ae8ae814ae8ae814ae8ae814ae8ae814ae8ae814ae8ae814ae8ae814ae8ae814ae8ae814ae8ae81</pre>
+         <pre class="wirelog_tx_octets">               4ae8ae814ae8ae814ae8ae814ae8 ...</pre>
+         <pre class="wirelog_tx_frame">092 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=5b7ec5fc, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">093 TX OCTETS: 00fe05146af8458240d26fa840d26fa840d26fa840d26fa840d26fa840d26fa840d26fa840d26fa840d26fa840d26fa840d2</pre>
-         <pre class="wirelog_tx_octets">               6fa840d26fa840d26fa840d26fa8 ...</pre>
-         <pre class="wirelog_tx_frame">094 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=3350861c, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">093 TX OCTETS: 00fe05145b7ec5fc7154efd67154efd67154efd67154efd67154efd67154efd67154efd67154efd67154efd67154efd67154</pre>
+         <pre class="wirelog_tx_octets">               efd67154efd67154efd67154efd6 ...</pre>
+         <pre class="wirelog_tx_frame">094 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=d1379f3d, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">095 TX OCTETS: 00fe05143350861c197aac36197aac36197aac36197aac36197aac36197aac36197aac36197aac36197aac36197aac36197a</pre>
-         <pre class="wirelog_tx_octets">               ac36197aac36197aac36197aac36 ...</pre>
-         <pre class="wirelog_tx_frame">096 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=bc5ea254, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">095 TX OCTETS: 00fe0514d1379f3dfb1db517fb1db517fb1db517fb1db517fb1db517fb1db517fb1db517fb1db517fb1db517fb1db517fb1d</pre>
+         <pre class="wirelog_tx_octets">               b517fb1db517fb1db517fb1db517 ...</pre>
+         <pre class="wirelog_tx_frame">096 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=c0144e4e, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">097 TX OCTETS: 00fe0514bc5ea2549674887e9674887e9674887e9674887e9674887e9674887e9674887e9674887e9674887e9674887e9674</pre>
-         <pre class="wirelog_tx_octets">               887e9674887e9674887e9674887e ...</pre>
-         <pre class="wirelog_tx_frame">098 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=21d3037b, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">097 TX OCTETS: 00fe0514c0144e4eea3e6464ea3e6464ea3e6464ea3e6464ea3e6464ea3e6464ea3e6464ea3e6464ea3e6464ea3e6464ea3e</pre>
+         <pre class="wirelog_tx_octets">               6464ea3e6464ea3e6464ea3e6464 ...</pre>
+         <pre class="wirelog_tx_frame">098 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=6b0542cc, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">099 TX OCTETS: 00fe051421d3037b0bf929510bf929510bf929510bf929510bf929510bf929510bf929510bf929510bf929510bf929510bf9</pre>
-         <pre class="wirelog_tx_octets">               29510bf929510bf929510bf92951 ...</pre>
-         <pre class="wirelog_tx_frame">100 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=e700085a, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">099 TX OCTETS: 00fe05146b0542cc412f68e6412f68e6412f68e6412f68e6412f68e6412f68e6412f68e6412f68e6412f68e6412f68e6412f</pre>
+         <pre class="wirelog_tx_octets">               68e6412f68e6412f68e6412f68e6 ...</pre>
+         <pre class="wirelog_tx_frame">100 TX FRAME : OPCODE=0, FIN=False, RSV=0, PAYLOAD-LEN=1300, MASK=3a0806ee, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">101 TX OCTETS: 00fe0514e700085acd2a2270cd2a2270cd2a2270cd2a2270cd2a2270cd2a2270cd2a2270cd2a2270cd2a2270cd2a2270cd2a</pre>
-         <pre class="wirelog_tx_octets">               2270cd2a2270cd2a2270cd2a2270 ...</pre>
-         <pre class="wirelog_tx_frame">102 TX FRAME : OPCODE=0, FIN=True, RSV=0, PAYLOAD-LEN=536, MASK=baa7b7b9, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_octets">101 TX OCTETS: 00fe05143a0806ee10222cc410222cc410222cc410222cc410222cc410222cc410222cc410222cc410222cc410222cc41022</pre>
+         <pre class="wirelog_tx_octets">               2cc410222cc410222cc410222cc4 ...</pre>
+         <pre class="wirelog_tx_frame">102 TX FRAME : OPCODE=0, FIN=True, RSV=0, PAYLOAD-LEN=536, MASK=80caf072, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_octets">103 TX OCTETS: 80fe0218baa7b7b9908d9d93908d9d93908d9d93908d9d93908d9d93908d9d93908d9d93908d9d93908d9d93908d9d93908d</pre>
-         <pre class="wirelog_tx_octets">               9d93908d9d93908d9d93908d9d93 ...</pre>
+         <pre class="wirelog_tx_octets">103 TX OCTETS: 80fe021880caf072aae0da58aae0da58aae0da58aae0da58aae0da58aae0da58aae0da58aae0da58aae0da58aae0da58aae0</pre>
+         <pre class="wirelog_tx_octets">               da58aae0da58aae0da58aae0da58 ...</pre>
          <pre class="wirelog_kill_after">104 FAIL CONNECTION AFTER 10.000000 sec</pre>
          <pre class="wirelog_rx_octets">105 RX OCTETS: 817f00000000000100002a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a</pre>
          <pre class="wirelog_rx_octets">               2a2a2a2a2a2a2a2a2a2a2a2a2a2a ...</pre>
@@ -503,9 +503,9 @@ Sec-Websocket-Accept: s8LVLeK0+HO8zclX0oJIyEfhYI4=</pre>
          <pre class="wirelog_rx_octets">109 RX OCTETS: 2a2a2a2a2a2a2a2a2a2a</pre>
          <pre class="wirelog_rx_frame">110 RX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=65536, MASKED=False, MASK=None</pre>
          <pre class="wirelog_rx_frame">               **************************************************************** ...</pre>
-         <pre class="wirelog_tx_frame">111 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASK=f69a75d8, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_frame">111 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASK=22150477, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               0x03e8</pre>
-         <pre class="wirelog_tx_octets">112 TX OCTETS: 8882f69a75d8f572</pre>
+         <pre class="wirelog_tx_octets">112 TX OCTETS: 88822215047721fd</pre>
          <pre class="wirelog_rx_octets">113 RX OCTETS: 880203e8</pre>
          <pre class="wirelog_rx_frame">114 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=False, MASK=None</pre>
          <pre class="wirelog_rx_frame">               0x03e8</pre>
