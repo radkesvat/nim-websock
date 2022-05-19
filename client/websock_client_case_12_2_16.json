@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 1024 octets. Use default permessage-deflate offer.",
    "droppedByMe": true,
-   "duration": 20643,
+   "duration": 26548,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=335&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: 7xlMi71VeXIS2iW/EN7vcA==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: yb4tcPHEiZDM5S8KzyQt2MR/beo=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
+   "httpRequest": "GET /runCase?case=335&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: XecTZz8x3M6lg8LeVK7piw==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: P50OEZ+0jH9hBq1DUIyyVV+e81E=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
    "id": "12.2.16",
    "isServer": true,
    "localCloseCode": 1000,
@@ -45,7 +45,7 @@
       "42582": 1,
       "42585": 1,
       "42588": 1,
-      "42597": 2,
+      "42597": 1,
       "42600": 1,
       "42602": 2,
       "42604": 1,
@@ -56,6 +56,7 @@
       "42640": 1,
       "42641": 2,
       "42645": 1,
+      "42650": 1,
       "42656": 1,
       "42658": 1,
       "42661": 1,
@@ -853,9 +854,10 @@
       "49117": 2,
       "49120": 1,
       "49230": 1,
-      "65536": 1000
+      "65483": 1,
+      "65536": 999
    },
-   "started": "2022-05-18T13:43:02.241Z",
+   "started": "2022-05-19T12:43:14.676Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.8504757537841797,
       "incomingOctetsAppLevel": 131072000,
@@ -1540,7 +1542,7 @@
          "RO",
          [
             8,
-            "888291f7e472921f"
+            "88821d3bb3e51ed3"
          ]
       ],
       [
@@ -1553,7 +1555,7 @@
          true,
          0,
          true,
-         "91f7e472"
+         "1d3bb3e5"
       ]
    ]
 }
