@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 256K message followed by close then a ping",
    "droppedByMe": false,
-   "duration": 95,
+   "duration": 94,
    "expectation": "Case outcome depends on implementation defined close behavior. Message and close frame are sent back to back. If the close frame is processed before the text message write is complete (as can happen in asynchronous processing models) the close frame is processed first and the text message may not be received or may only be partially recieved.",
    "expected": {
       "NON-STRICT": [],
@@ -28,8 +28,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: iqEF5kIuIoDx2jNihxTmxw==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Thu, 19 May 2022 12:36:57 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: Oct1uMwBOwYrWVYtL2MFueIeIkY=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 7NkG67sTlztgXyUcEBgebQ==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 25 May 2022 15:03:10 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: 7EM3GTd6Nsdd5RZZsmTnUfQAOVI=\r\n\r\n",
    "id": "7.1.6",
    "isServer": false,
    "localCloseCode": 1000,
@@ -61,7 +61,7 @@
       "166": 1,
       "65536": 4
    },
-   "started": "2022-05-19T12:36:57.214Z",
+   "started": "2022-05-25T15:03:10.957Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 2,
@@ -93,7 +93,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205468752c203139204d617920323032322031323a33363a35 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c203235204d617920323032322031353a30333a31 ..."
          ]
       ],
       [
@@ -105,7 +105,7 @@
          1,
          true,
          0,
-         "bea72edf",
+         "de058e7a",
          262144,
          null,
          false
@@ -114,7 +114,7 @@
          "TO",
          [
             262158,
-            "81ff0000000000040000bea72edffce65dbb898144b78c946c9ecdc319f9d4cf1cecfce65dbb898144b78c946c9ecdc319f9d4cf1cecfce65dbb898144b78c94 ..."
+            "81ff0000000000040000de058e7a9c44fd1ee923e412ec36cc3bad61b95cb46dbc499c44fd1ee923e412ec36cc3bad61b95cb46dbc499c44fd1ee923e412ec36 ..."
          ],
          false
       ],
@@ -127,7 +127,7 @@
          1,
          true,
          0,
-         "ac6ba084",
+         "e62d886c",
          null,
          null,
          false
@@ -136,7 +136,7 @@
          "TO",
          [
             18,
-            "818cac6ba084e40ecce8c34bf7ebde07c4a5"
+            "818ce62d886cae48e400890ddf039441ec4d"
          ],
          false
       ],
@@ -149,7 +149,7 @@
          8,
          true,
          0,
-         "d52d5b74",
+         "6ad45689",
          null,
          null,
          false
@@ -158,7 +158,7 @@
          "TO",
          [
             8,
-            "8882d52d5b74d6c5"
+            "88826ad45689693c"
          ],
          false
       ],
@@ -171,7 +171,7 @@
          9,
          true,
          0,
-         "4fca51e8",
+         "1c9f93e8",
          null,
          null,
          false
@@ -180,7 +180,7 @@
          "TO",
          [
             6,
-            "89804fca51e8"
+            "89801c9f93e8"
          ],
          false
       ],
