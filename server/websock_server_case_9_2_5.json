@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send binary message message with payload of length 8 * 2**20 (16M).",
    "droppedByMe": false,
-   "duration": 280,
+   "duration": 285,
    "expectation": "Receive echo'ed binary message (with payload as sent).",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: dpqoWIDwbtOPNMQwb1oG9Q==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 25 May 2022 15:03:21 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: 7HODcqvIV0vWP/UdfygdIjawixs=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: WbQTweyAQQWObH43+pJK6w==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 17 Jun 2022 14:18:00 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: erLumWLhtz44immNi3Y17IG4Z1I=\r\n\r\n",
    "id": "9.2.5",
    "isServer": false,
    "localCloseCode": 1000,
@@ -39,11 +39,13 @@
    },
    "rxOctetStats": {
       "4": 1,
-      "10": 8,
+      "10": 7,
       "166": 1,
-      "65536": 128
+      "328": 1,
+      "65218": 1,
+      "65536": 127
    },
-   "started": "2022-05-25T15:03:21.826Z",
+   "started": "2022-06-17T14:18:00.378Z",
    "trafficStats": null,
    "txFrameStats": {
       "2": 1,
@@ -72,7 +74,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c203235204d617920323032322031353a30333a32 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203137204a756e20323032322031343a31383a30 ..."
          ]
       ],
       [
@@ -88,7 +90,7 @@
          8,
          true,
          0,
-         "fa13c167",
+         "68859c0a",
          null,
          null,
          false
@@ -97,7 +99,7 @@
          "TO",
          [
             8,
-            "8882fa13c167f9fb"
+            "888268859c0a6b6d"
          ],
          false
       ],

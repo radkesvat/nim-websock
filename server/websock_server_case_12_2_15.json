@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 256 octets. Use default permessage-deflate offer.",
    "droppedByMe": false,
-   "duration": 31422,
+   "duration": 33550,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: PX4dCA16V8iWg33EBxiRhA==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Wed, 25 May 2022 15:10:18 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: tOPKXR021YxwaUVPprdEC7/3ydc=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 15MRNbNNkOLCZtYZ3NAcHA==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 17 Jun 2022 14:25:35 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: 4KUhPj/tMsYKhNI1qKcsFTz6z3c=\r\n\r\n",
    "id": "12.2.15",
    "isServer": false,
    "localCloseCode": 1000,
@@ -230,7 +230,7 @@
       "43310": 1,
       "43313": 1,
       "43315": 1,
-      "43316": 3,
+      "43316": 2,
       "43321": 1,
       "43322": 2,
       "43324": 1,
@@ -248,6 +248,7 @@
       "43363": 1,
       "43365": 2,
       "43366": 1,
+      "43369": 1,
       "43370": 1,
       "43371": 1,
       "43372": 1,
@@ -381,8 +382,8 @@
       "44275": 1,
       "44293": 1,
       "44306": 1,
-      "44366": 1,
       "44378": 1,
+      "44419": 1,
       "44435": 1,
       "44449": 1,
       "44469": 1,
@@ -665,7 +666,6 @@
       "48514": 2,
       "48515": 2,
       "48516": 1,
-      "48517": 1,
       "48519": 1,
       "48524": 1,
       "48527": 2,
@@ -688,6 +688,7 @@
       "48567": 3,
       "48568": 1,
       "48569": 3,
+      "48570": 1,
       "48571": 2,
       "48573": 1,
       "48575": 2,
@@ -804,7 +805,7 @@
       "49030": 1,
       "49031": 2,
       "49032": 1,
-      "49033": 4,
+      "49033": 3,
       "49034": 2,
       "49035": 2,
       "49037": 2,
@@ -838,7 +839,7 @@
       "49079": 2,
       "49080": 1,
       "49085": 2,
-      "49086": 2,
+      "49086": 3,
       "49088": 2,
       "49089": 2,
       "49092": 2,
@@ -853,9 +854,10 @@
       "49113": 2,
       "49116": 1,
       "49226": 1,
-      "65536": 1000
+      "65483": 4,
+      "65536": 996
    },
-   "started": "2022-05-25T15:10:18.021Z",
+   "started": "2022-06-17T14:25:35.358Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.8504757537841797,
       "incomingOctetsAppLevel": 131072000,
@@ -1153,7 +1155,7 @@
          "RO",
          [
             240,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205765642c203235204d617920323032322031353a31303a31 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203137204a756e20323032322031343a32353a33 ..."
          ]
       ],
       [
@@ -1177,7 +1179,7 @@
          8,
          true,
          0,
-         "8dc1f4bb",
+         "d5c28186",
          null,
          null,
          false
@@ -1186,7 +1188,7 @@
          "TO",
          [
             8,
-            "88828dc1f4bb8e29"
+            "8882d5c28186d62a"
          ],
          false
       ],
