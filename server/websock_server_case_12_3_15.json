@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 256 octets. Use default permessage-deflate offer.",
    "droppedByMe": false,
-   "duration": 34320,
+   "duration": 29490,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: INFG9kArVV46eEXzgDYaWg==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 17 Jun 2022 14:28:43 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: LO3hiRrcVOCm3oZF+0F+jYUAB5s=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: PP0RQfsk5d3Me1laUxa69A==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 20 Jun 2022 08:43:40 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: /X1OItP6R43Ot8RIdLtT6+kFxdw=\r\n\r\n",
    "id": "12.3.15",
    "isServer": false,
    "localCloseCode": 1000,
@@ -756,7 +756,7 @@
       "51422": 1,
       "51722": 1
    },
-   "started": "2022-06-17T14:28:43.443Z",
+   "started": "2022-06-20T08:43:40.740Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.38521256256103514,
       "incomingOctetsAppLevel": 131072000,
@@ -1054,7 +1054,7 @@
          "RO",
          [
             240,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203137204a756e20323032322031343a32383a34 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204d6f6e2c203230204a756e20323032322030383a34333a34 ..."
          ]
       ],
       [
@@ -1078,7 +1078,7 @@
          8,
          true,
          0,
-         "8029fca2",
+         "52eee56b",
          null,
          null,
          false
@@ -1087,7 +1087,7 @@
          "TO",
          [
             8,
-            "88828029fca283c1"
+            "888252eee56b5106"
          ],
          false
       ],

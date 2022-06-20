@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send Ping fragmented into 2 fragments.",
    "droppedByMe": false,
-   "duration": 1,
+   "duration": 0,
    "expectation": "Connection is failed immediately, since control message MUST NOT be fragmented.",
    "expected": {
       "OK": []
@@ -21,8 +21,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: v4EtZP638CuLWildEOz7Kg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 17 Jun 2022 14:40:47 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: +jquaAdjbwACG8ivu5jbYB8uG+Y=\r\n\r\n",
+   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 3TWtv+/0G3FPxwfkFiyTDg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 20 Jun 2022 09:33:08 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: BGoXE9D4xb/dDBwR3lHl7nU7KDc=\r\n\r\n",
    "id": "5.1",
    "isServer": false,
    "localCloseCode": null,
@@ -38,7 +38,7 @@
    "rxOctetStats": {
       "166": 1
    },
-   "started": "2022-06-17T14:40:47.556Z",
+   "started": "2022-06-20T09:33:08.659Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 1,
@@ -66,7 +66,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203137204a756e20323032322031343a34303a34 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204d6f6e2c203230204a756e20323032322030393a33333a30 ..."
          ]
       ],
       [
@@ -78,7 +78,7 @@
          9,
          false,
          0,
-         "cf1ebb3c",
+         "ad79e50c",
          null,
          null,
          false
@@ -87,7 +87,7 @@
          "TO",
          [
             15,
-            "0989cf1ebb3ca96cda5ba27bd548fe"
+            "0989ad79e50ccb0b846bc01c8b789c"
          ],
          false
       ],
@@ -100,7 +100,7 @@
          0,
          true,
          0,
-         "61567fb2",
+         "15332567",
          null,
          null,
          false
@@ -109,7 +109,7 @@
          "TO",
          [
             15,
-            "808961567fb207241ed50c3311c653"
+            "8089153325677341440078564b1327"
          ],
          false
       ],

@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send text Message fragmented into 2 fragments, with both frame opcodes set to text, sent in one chop.",
    "droppedByMe": false,
-   "duration": 1,
+   "duration": 0,
    "expectation": "The connection is failed immediately, since all data frames after the initial data frame must have opcode 0.",
    "expected": {
       "OK": []
@@ -21,8 +21,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: LEVGvPI44dztdDa1IPWaPA==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Fri, 17 Jun 2022 14:17:37 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: 4vhIaYMsMjY/n6sD5HNog0qKgGs=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: M2LXiveYqlQspvqEwj3cUQ==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 20 Jun 2022 08:34:17 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: UTPPJuOrwUxS75nbTPQMNJzni/k=\r\n\r\n",
    "id": "5.18",
    "isServer": false,
    "localCloseCode": null,
@@ -38,7 +38,7 @@
    "rxOctetStats": {
       "166": 1
    },
-   "started": "2022-06-17T14:17:37.793Z",
+   "started": "2022-06-20T08:34:17.996Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 2
@@ -65,7 +65,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204672692c203137204a756e20323032322031343a31373a33 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204d6f6e2c203230204a756e20323032322030383a33343a31 ..."
          ]
       ],
       [
@@ -77,7 +77,7 @@
          1,
          false,
          0,
-         "1afe388a",
+         "ec4b4eff",
          null,
          null,
          false
@@ -86,7 +86,7 @@
          "TO",
          [
             15,
-            "01891afe388a7c8c59ed779b56fe2b"
+            "0189ec4b4eff8a392f98812e208bdd"
          ],
          false
       ],
@@ -99,7 +99,7 @@
          1,
          true,
          0,
-         "a84a6bd6",
+         "dc60b8a3",
          null,
          null,
          false
@@ -108,7 +108,7 @@
          "TO",
          [
             15,
-            "8189a84a6bd6ce380ab1c52f05a29a"
+            "8189dc60b8a3ba12d9c4b105d6d7ee"
          ],
          false
       ],

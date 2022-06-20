@@ -202,7 +202,7 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSocket Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSocket Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSocket">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSocket">                 </img></a></center>
       <br/>
-      <p class="case case_ok">websock-client - <span style="font-size: 1.3em;"><b>Case 12.2.15</b></span> : Pass - <span style="font-size: 0.9em;"><b>26871</b> ms @ 2022-06-17T15:42:23.500Z</a></p>
+      <p class="case case_ok">websock-client - <span style="font-size: 1.3em;"><b>Case 12.2.15</b></span> : Pass - <span style="font-size: 0.9em;"><b>27094</b> ms @ 2022-06-20T10:18:55.035Z</a></p>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 compressed messages each of payload size 131072, auto-fragment to 256 octets. Use default permessage-deflate offer.</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
 
@@ -220,14 +220,14 @@ Upgrade: websocket
 Host: 127.0.0.1:9001
 Connection: Upgrade
 Sec-Websocket-Version: 13
-Sec-Websocket-Key: 9AyY4QQ8BuKp7hpBDjj62A==
+Sec-Websocket-Key: fP3aiqGmmrTp8p8rKizi3w==
 Cache-Control: no-cache</pre>
       <pre class="http_dump">HTTP/1.1 101 Switching Protocols
 Server: AutobahnTestSuite/0.8.2-0.10.9
 X-Powered-By: AutobahnPython/0.10.9
 Upgrade: WebSocket
 Connection: Upgrade
-Sec-WebSocket-Accept: pn3F/dn/Xa5syVGltAWkWqHR5xs=
+Sec-WebSocket-Accept: qLH8uT3r57Mgkn96s+q0s2p10YE=
 Sec-WebSocket-Extensions: permessage-deflate</pre>
       <br/><hr/>
       <h2>Closing Behavior</h2>
@@ -747,7 +747,7 @@ Sec-WebSocket-Extensions: permessage-deflate</pre>
          <tr class="stats_row"><td>47200</td><td>1</td><td>47200</td></tr>
          <tr class="stats_row"><td>47220</td><td>1</td><td>47220</td></tr>
          <tr class="stats_row"><td>47223</td><td>1</td><td>47223</td></tr>
-         <tr class="stats_row"><td>47315</td><td>1</td><td>47315</td></tr>
+         <tr class="stats_row"><td>47262</td><td>1</td><td>47262</td></tr>
          <tr class="stats_row"><td>47320</td><td>1</td><td>47320</td></tr>
          <tr class="stats_row"><td>47351</td><td>1</td><td>47351</td></tr>
          <tr class="stats_row"><td>47366</td><td>1</td><td>47366</td></tr>
@@ -800,6 +800,7 @@ Sec-WebSocket-Extensions: permessage-deflate</pre>
          <tr class="stats_row"><td>48217</td><td>1</td><td>48217</td></tr>
          <tr class="stats_row"><td>48220</td><td>1</td><td>48220</td></tr>
          <tr class="stats_row"><td>48221</td><td>1</td><td>48221</td></tr>
+         <tr class="stats_row"><td>48228</td><td>1</td><td>48228</td></tr>
          <tr class="stats_row"><td>48229</td><td>1</td><td>48229</td></tr>
          <tr class="stats_row"><td>48231</td><td>1</td><td>48231</td></tr>
          <tr class="stats_row"><td>48233</td><td>1</td><td>48233</td></tr>
@@ -815,7 +816,6 @@ Sec-WebSocket-Extensions: permessage-deflate</pre>
          <tr class="stats_row"><td>48274</td><td>1</td><td>48274</td></tr>
          <tr class="stats_row"><td>48278</td><td>1</td><td>48278</td></tr>
          <tr class="stats_row"><td>48279</td><td>1</td><td>48279</td></tr>
-         <tr class="stats_row"><td>48281</td><td>1</td><td>48281</td></tr>
          <tr class="stats_row"><td>48290</td><td>1</td><td>48290</td></tr>
          <tr class="stats_row"><td>48291</td><td>2</td><td>96582</td></tr>
          <tr class="stats_row"><td>48294</td><td>1</td><td>48294</td></tr>
@@ -909,7 +909,7 @@ Sec-WebSocket-Extensions: permessage-deflate</pre>
          <tr class="stats_row"><td>48581</td><td>1</td><td>48581</td></tr>
          <tr class="stats_row"><td>48582</td><td>1</td><td>48582</td></tr>
          <tr class="stats_row"><td>48584</td><td>1</td><td>48584</td></tr>
-         <tr class="stats_row"><td>48588</td><td>3</td><td>145764</td></tr>
+         <tr class="stats_row"><td>48588</td><td>4</td><td>194352</td></tr>
          <tr class="stats_row"><td>48591</td><td>1</td><td>48591</td></tr>
          <tr class="stats_row"><td>48592</td><td>2</td><td>97184</td></tr>
          <tr class="stats_row"><td>48593</td><td>4</td><td>194372</td></tr>
@@ -935,7 +935,6 @@ Sec-WebSocket-Extensions: permessage-deflate</pre>
          <tr class="stats_row"><td>48636</td><td>1</td><td>48636</td></tr>
          <tr class="stats_row"><td>48638</td><td>2</td><td>97276</td></tr>
          <tr class="stats_row"><td>48640</td><td>1</td><td>48640</td></tr>
-         <tr class="stats_row"><td>48641</td><td>1</td><td>48641</td></tr>
          <tr class="stats_row"><td>48643</td><td>2</td><td>97286</td></tr>
          <tr class="stats_row"><td>48644</td><td>1</td><td>48644</td></tr>
          <tr class="stats_row"><td>48647</td><td>2</td><td>97294</td></tr>
@@ -1068,8 +1067,7 @@ Sec-WebSocket-Extensions: permessage-deflate</pre>
          <tr class="stats_row"><td>49117</td><td>2</td><td>98234</td></tr>
          <tr class="stats_row"><td>49120</td><td>1</td><td>49120</td></tr>
          <tr class="stats_row"><td>49230</td><td>1</td><td>49230</td></tr>
-         <tr class="stats_row"><td>65483</td><td>3</td><td>196449</td></tr>
-         <tr class="stats_row"><td>65536</td><td>997</td><td>65339392</td></tr>
+         <tr class="stats_row"><td>65536</td><td>1000</td><td>65536000</td></tr>
          <tr class="stats_total"><td>Total</td><td>2002</td><td>111487854</td></tr>
       </table>
       <h3>Octets Transmitted by Chop Size</h3>
@@ -1353,8 +1351,8 @@ Sec-WebSocket-Extensions: permessage-deflate</pre>
          <pre class="wirelog_tx_frame">005 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASK=None, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               0x03e8</pre>
          <pre class="wirelog_tx_octets">006 TX OCTETS: 880203e8</pre>
-         <pre class="wirelog_rx_octets">007 RX OCTETS: 88825ededb185d36</pre>
-         <pre class="wirelog_rx_frame">008 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=True, MASK=3565646564623138</pre>
+         <pre class="wirelog_rx_octets">007 RX OCTETS: 88823dd4a7d33e3c</pre>
+         <pre class="wirelog_rx_frame">008 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=True, MASK=3364643461376433</pre>
          <pre class="wirelog_rx_frame">               0x03e8</pre>
          <pre class="wirelog_tcp_closed_by_me">009 TCP DROPPED BY ME</pre>
       </div>

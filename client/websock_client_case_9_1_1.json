@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send text message message with payload of length 64 * 2**10 (64k).",
    "droppedByMe": true,
-   "duration": 19,
+   "duration": 20,
    "expectation": "Receive echo'ed text message (with payload as sent).",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=247&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: MqJTgC8dWfI3VX9oUvCIRA==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: u6tifwumgIPztDXXoee3E6iOZBo=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=247&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: QcY0cghaliJjAKFNfDiG9A==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: nv4f5RjvDefFtLwIJW9WlB7eqNY=\r\n\r\n",
    "id": "9.1.1",
    "isServer": true,
    "localCloseCode": 1000,
@@ -38,11 +38,11 @@
    },
    "rxOctetStats": {
       "8": 1,
+      "14": 1,
       "288": 1,
-      "32768": 1,
-      "32782": 1
+      "65536": 1
    },
-   "started": "2022-06-17T15:36:01.233Z",
+   "started": "2022-06-20T10:12:27.770Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1,
@@ -104,7 +104,7 @@
          "RO",
          [
             8,
-            "888220b18d012359"
+            "8882eedf1237ed37"
          ]
       ],
       [
@@ -117,7 +117,7 @@
          true,
          0,
          true,
-         "20b18d01"
+         "eedf1237"
       ]
    ]
 }
