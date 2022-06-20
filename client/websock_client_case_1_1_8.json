@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send text message message with payload of length 65536. Sent out data in chops of 997 octets.",
    "droppedByMe": true,
-   "duration": 23,
+   "duration": 33,
    "expectation": "Receive echo'ed text message (with payload as sent). Clean close with normal code.",
    "expected": {
       "OK": [
@@ -27,8 +27,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=8&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: ++f0XgtCriOebnPgnRIr4w==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: sCjQSDm7apeEQet9i0bqbm6TOus=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=8&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: e7yTot5pPkTn065LaVkW0Q==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: MzejdKDPSGc+liOjPQsKeQuJGqU=\r\n\r\n",
    "id": "1.1.8",
    "isServer": true,
    "localCloseCode": 1000,
@@ -56,7 +56,7 @@
       "286": 1,
       "65536": 1
    },
-   "started": "2022-06-20T10:12:16.128Z",
+   "started": "2022-06-20T15:07:41.313Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1,
@@ -639,14 +639,14 @@
          "RO",
          [
             65536,
-            "81ff0000000000010000cd5ff06de775da47e775da47e775da47e775da47e775da47e775da47e775da47e775da47e775da47e775da47e775da47e775da47e775 ..."
+            "81ff0000000000010000a3ce092a89e4230089e4230089e4230089e4230089e4230089e4230089e4230089e4230089e4230089e4230089e4230089e4230089e4 ..."
          ]
       ],
       [
          "RO",
          [
             14,
-            "da47e775da47e775da47e775da47"
+            "230089e4230089e4230089e42300"
          ]
       ],
       [
@@ -659,7 +659,7 @@
          true,
          0,
          true,
-         "cd5ff06d"
+         "a3ce092a"
       ],
       [
          "TF",
@@ -687,7 +687,7 @@
          "RO",
          [
             8,
-            "888255727b65569a"
+            "8882806c3a9e8384"
          ]
       ],
       [
@@ -700,7 +700,7 @@
          true,
          0,
          true,
-         "55727b65"
+         "806c3a9e"
       ]
    ]
 }
