@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send text Message fragmented into 2 fragments, one ping with payload in-between. Octets are sent in frame-wise chops.",
    "droppedByMe": true,
-   "duration": 1,
+   "duration": 2,
    "expectation": "A pong is received, then the message is echo'ed back to us.",
    "expected": {
       "OK": [
@@ -31,8 +31,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=51&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: /1oegI32EFL0snbxQe7oPA==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: E4CDQKsBH7Ue457Dd7Fn6NeIONI=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=51&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: oWmQF29ak10DxgQ3N1P2ag==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: 1p3O4o9tXjRkWEGKq97D5JfrbwM=\r\n\r\n",
    "id": "5.7",
    "isServer": true,
    "localCloseCode": 1000,
@@ -65,7 +65,7 @@
       "24": 1,
       "287": 1
    },
-   "started": "2022-06-20T15:07:41.749Z",
+   "started": "2022-06-30T20:00:29.975Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 1,
@@ -174,7 +174,7 @@
          "RO",
          [
             18,
-            "8a8cb89c9cc2c8f5f2a598ecfdbbd4f3fda6"
+            "8a8c3d71d74c4d18b92b1d01b635511eb628"
          ]
       ],
       [
@@ -187,13 +187,13 @@
          true,
          0,
          true,
-         "b89c9cc2"
+         "3d71d74c"
       ],
       [
          "RO",
          [
             24,
-            "8192943a946af248f50df95ffa1ea55ce60bf357f104e008"
+            "8192cec43ad0a8b65bb7a3a154a4ffa248b1a9a95fbebaf6"
          ]
       ],
       [
@@ -206,7 +206,7 @@
          true,
          0,
          true,
-         "943a946a"
+         "cec43ad0"
       ],
       [
          "TF",
@@ -234,7 +234,7 @@
          "RO",
          [
             8,
-            "8882ebb24dede85a"
+            "8882653eb81866d6"
          ]
       ],
       [
@@ -247,7 +247,7 @@
          true,
          0,
          true,
-         "ebb24ded"
+         "653eb818"
       ]
    ]
 }

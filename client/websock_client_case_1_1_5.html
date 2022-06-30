@@ -202,7 +202,7 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSocket Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSocket Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSocket">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSocket">                 </img></a></center>
       <br/>
-      <p class="case case_ok">websock-client - <span style="font-size: 1.3em;"><b>Case 1.1.5</b></span> : Pass - <span style="font-size: 0.9em;"><b>1</b> ms @ 2022-06-20T15:07:41.223Z</a></p>
+      <p class="case case_ok">websock-client - <span style="font-size: 1.3em;"><b>Case 1.1.5</b></span> : Pass - <span style="font-size: 0.9em;"><b>1</b> ms @ 2022-06-30T20:00:29.419Z</a></p>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send text message message with payload of length 128.</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed text message (with payload as sent). Clean close with normal code.</p>
 
@@ -220,14 +220,14 @@ Upgrade: websocket
 Host: 127.0.0.1:9001
 Connection: Upgrade
 Sec-Websocket-Version: 13
-Sec-Websocket-Key: HLFc7qT0Oh8izpI7JilA0w==
+Sec-Websocket-Key: cPYBhFs4VFHypm2C5gJ79g==
 Cache-Control: no-cache</pre>
       <pre class="http_dump">HTTP/1.1 101 Switching Protocols
 Server: AutobahnTestSuite/0.8.2-0.10.9
 X-Powered-By: AutobahnPython/0.10.9
 Upgrade: WebSocket
 Connection: Upgrade
-Sec-WebSocket-Accept: dAUFmCwwL4uHNgNMPDjjpFUqafc=</pre>
+Sec-WebSocket-Accept: As966ua/2rEmx+l9o6DSc1dFMiA=</pre>
       <br/><hr/>
       <h2>Closing Behavior</h2>
       <table>
@@ -289,15 +289,15 @@ Sec-WebSocket-Accept: dAUFmCwwL4uHNgNMPDjjpFUqafc=</pre>
          <pre class="wirelog_tx_octets">003 TX OCTETS: 817e00802a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a</pre>
          <pre class="wirelog_tx_octets">               2a2a2a2a2a2a2a2a2a2a2a2a2a2a ...</pre>
          <pre class="wirelog_kill_after">004 FAIL CONNECTION AFTER 1.000000 sec</pre>
-         <pre class="wirelog_rx_octets">005 RX OCTETS: 81fe00807751a7745d7b8d5e5d7b8d5e5d7b8d5e5d7b8d5e5d7b8d5e5d7b8d5e5d7b8d5e5d7b8d5e5d7b8d5e5d7b8d5e5d7b</pre>
-         <pre class="wirelog_rx_octets">               8d5e5d7b8d5e5d7b8d5e5d7b8d5e ...</pre>
-         <pre class="wirelog_rx_frame">006 RX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=128, MASKED=True, MASK=3737353161373734</pre>
+         <pre class="wirelog_rx_octets">005 RX OCTETS: 81fe0080ad3ce5668716cf4c8716cf4c8716cf4c8716cf4c8716cf4c8716cf4c8716cf4c8716cf4c8716cf4c8716cf4c8716</pre>
+         <pre class="wirelog_rx_octets">               cf4c8716cf4c8716cf4c8716cf4c ...</pre>
+         <pre class="wirelog_rx_frame">006 RX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=128, MASKED=True, MASK=6164336365353636</pre>
          <pre class="wirelog_rx_frame">               **************************************************************** ...</pre>
          <pre class="wirelog_tx_frame">007 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASK=None, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               0x03e8</pre>
          <pre class="wirelog_tx_octets">008 TX OCTETS: 880203e8</pre>
-         <pre class="wirelog_rx_octets">009 RX OCTETS: 888235a0095a3648</pre>
-         <pre class="wirelog_rx_frame">010 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=True, MASK=3335613030393561</pre>
+         <pre class="wirelog_rx_octets">009 RX OCTETS: 8882cf53d4c8ccbb</pre>
+         <pre class="wirelog_rx_frame">010 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=True, MASK=6366353364346338</pre>
          <pre class="wirelog_rx_frame">               0x03e8</pre>
          <pre class="wirelog_tcp_closed_by_me">011 TCP DROPPED BY ME</pre>
       </div>
