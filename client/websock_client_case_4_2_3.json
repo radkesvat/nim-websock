@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send small text message, then send frame with reserved control <b>Opcode = 13</b>, then send Ping.",
    "droppedByMe": false,
-   "duration": 1,
+   "duration": 2,
    "expectation": "Echo for first message is received, but then connection is failed immediately, since reserved opcode frame is used. A Pong is not received.",
    "expected": {
       "NON-STRICT": [],
@@ -28,8 +28,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=42&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: RWnJpfn/DhWc69vVOAuz2w==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: f/Avca25Y7X8gAVl8wQX12Etch4=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=42&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: uQ+0LS0mXiABMuPu85ea8Q==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: bGj5/72lr/YTVBOJ9wkXGbnYjww=\r\n\r\n",
    "id": "4.2.3",
    "isServer": true,
    "localCloseCode": null,
@@ -54,7 +54,7 @@
       "19": 1,
       "287": 1
    },
-   "started": "2022-07-04T15:03:34.459Z",
+   "started": "2022-07-05T17:10:00.489Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1,
@@ -161,7 +161,7 @@
          "RO",
          [
             19,
-            "818d436f20560b0a4c3a2c4300212c1d4c3262"
+            "818da62723b3ee424fdfc90b03c4c9554fd787"
          ]
       ],
       [
@@ -174,7 +174,7 @@
          true,
          0,
          true,
-         "436f2056"
+         "a62723b3"
       ]
    ]
 }

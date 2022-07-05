@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send a close frame with invalid UTF8 payload",
    "droppedByMe": false,
-   "duration": 0,
+   "duration": 1,
    "expectation": "Clean close with protocol error or invalid utf8 code or dropped TCP.",
    "expected": {
       "OK": []
@@ -22,8 +22,8 @@
       "requireClean": false
    },
    "failedByMe": false,
-   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: qgykrRUXdc9JDbYrSd4sdQ==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 04 Jul 2022 14:19:49 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: OCUmai+ynC4F7PyHVT85b7Z0Jrk=\r\n\r\n",
+   "httpRequest": "GET /wss HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8889\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: NitFukkN5xfIXhdWD7gAoA==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Tue, 05 Jul 2022 17:08:44 GMT\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: +ewm5XODJzoLJQrYLMtWfzYpOf0=\r\n\r\n",
    "id": "7.5.1",
    "isServer": false,
    "localCloseCode": 1000,
@@ -39,7 +39,7 @@
    "rxOctetStats": {
       "166": 1
    },
-   "started": "2022-07-04T14:19:49.923Z",
+   "started": "2022-07-05T17:08:44.133Z",
    "trafficStats": null,
    "txFrameStats": {
       "8": 1
@@ -66,7 +66,7 @@
          "RO",
          [
             166,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204d6f6e2c203034204a756c20323032322031343a31393a34 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c203035204a756c20323032322031373a30383a34 ..."
          ]
       ],
       [
@@ -78,7 +78,7 @@
          8,
          true,
          0,
-         "2709fde9",
+         "aaa5e1bd",
          null,
          null,
          false
@@ -87,7 +87,7 @@
          "TO",
          [
             28,
-            "88962709fde924e13353c6b44426a4c7412792e45d69426d949d426d"
+            "8896aaa5e1bda94d2f074b185872296b5d731f48413dcfc188c9cfc1"
          ],
          false
       ],

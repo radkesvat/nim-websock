@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 1024, auto-fragment to 0 octets. Use permessage-deflate client offers (requestNoContextTakeover, requestMaxWindowBits): [(True, 9), (True, 0), (False, 0)]",
    "droppedByMe": false,
-   "duration": 1163,
+   "duration": 1570,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 240 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 0o0EpIXP5IagpBTpjGTc1Q==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits; server_no_context_takeover; server_max_window_bits=9, permessage-deflate; client_no_context_takeover; client_max_window_bits; server_no_context_takeover, permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Mon, 04 Jul 2022 14:56:52 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover; server_no_context_takeover; server_max_window_bits=9\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: 100l8kaM1ZmKFqzbYXJ3mrJyppA=\r\n\r\n",
+   "httpRequest": "GET /ws HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.8.2-0.10.9\r\nHost: 127.0.0.1:8888\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: aOhJzKCMUeoAiiVsBA7KcA==\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover; client_max_window_bits; server_no_context_takeover; server_max_window_bits=9, permessage-deflate; client_no_context_takeover; client_max_window_bits; server_no_context_takeover, permessage-deflate; client_no_context_takeover; client_max_window_bits\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nDate: Tue, 05 Jul 2022 18:07:03 GMT\r\nSec-Websocket-Extensions: permessage-deflate; client_no_context_takeover; server_no_context_takeover; server_max_window_bits=9\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-Websocket-Accept: KDX8EG/4oPZhWlHOcJ/DC1GvBWs=\r\n\r\n",
    "id": "13.7.4",
    "isServer": false,
    "localCloseCode": 1000,
@@ -101,7 +101,7 @@
       "226": 1,
       "294": 1
    },
-   "started": "2022-07-04T14:56:52.026Z",
+   "started": "2022-07-05T18:07:03.658Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.1703076171875,
       "incomingOctetsAppLevel": 1024000,
@@ -198,7 +198,7 @@
          "RO",
          [
             294,
-            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a204d6f6e2c203034204a756c20323032322031343a35363a35 ..."
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c203035204a756c20323032322031383a30373a30 ..."
          ]
       ],
       [
@@ -222,7 +222,7 @@
          8,
          true,
          0,
-         "a4c0c64c",
+         "aa7708e7",
          null,
          null,
          false
@@ -231,7 +231,7 @@
          "TO",
          [
             8,
-            "8882a4c0c64ca728"
+            "8882aa7708e7a99f"
          ],
          false
       ],
