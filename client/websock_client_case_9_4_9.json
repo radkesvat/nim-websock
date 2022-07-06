@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send fragmented binary message message with message payload of length 4 * 2**20 (4M). Sent out in fragments of 4M.",
    "droppedByMe": true,
-   "duration": 69,
+   "duration": 55,
    "expectation": "Receive echo'ed binary message (with payload as sent).",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=276&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: lI9zj6AYtMwdnTv5qTG8LQ==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: TzyR0gh1xAA5RGVi3CFL1cXEB+8=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=276&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: Rz5r+ZD9SquRpq+yk5YJSw==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: YyCuuWwCCysDgW8RdSigaANT08Q=\r\n\r\n",
    "id": "9.4.9",
    "isServer": true,
    "localCloseCode": 1000,
@@ -39,11 +39,12 @@
    },
    "rxOctetStats": {
       "8": 1,
-      "56": 1,
+      "14": 2,
+      "28": 1,
       "288": 1,
       "65536": 64
    },
-   "started": "2022-07-05T17:10:38.246Z",
+   "started": "2022-07-05T22:53:16.514Z",
    "trafficStats": null,
    "txFrameStats": {
       "2": 1,
@@ -105,7 +106,7 @@
          "RO",
          [
             8,
-            "8882b90265e9baea"
+            "88821d8a00781e62"
          ]
       ],
       [
@@ -118,7 +119,7 @@
          true,
          0,
          true,
-         "b90265e9"
+         "1d8a0078"
       ]
    ]
 }
