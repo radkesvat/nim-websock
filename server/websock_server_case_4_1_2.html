@@ -202,7 +202,7 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSocket Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSocket Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSocket">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSocket">                 </img></a></center>
       <br/>
-      <p class="case case_ok">websock server - <span style="font-size: 1.3em;"><b>Case 4.1.2</b></span> : Pass - <span style="font-size: 0.9em;"><b>1</b> ms @ 2022-07-21T15:56:55.743Z</a></p>
+      <p class="case case_ok">websock server - <span style="font-size: 1.3em;"><b>Case 4.1.2</b></span> : Pass - <span style="font-size: 0.9em;"><b>0</b> ms @ 2022-08-16T11:31:43.665Z</a></p>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send frame with reserved non-control <b>Opcode = 4</b> and non-empty payload.</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately.</p>
 
@@ -221,13 +221,13 @@ Upgrade: WebSocket
 Connection: Upgrade
 Pragma: no-cache
 Cache-Control: no-cache
-Sec-WebSocket-Key: vqn1uCOkkC5fEmayW1j2fg==
+Sec-WebSocket-Key: h/HXRT0NWiUlJ7izwleb/w==
 Sec-WebSocket-Version: 13</pre>
       <pre class="http_dump">HTTP/1.1 101 Switching Protocols
-Date: Thu, 21 Jul 2022 15:56:55 GMT
+Date: Tue, 16 Aug 2022 11:31:43 GMT
 Upgrade: websocket
 Connection: Upgrade
-Sec-Websocket-Accept: y1CW1jmrNJ9+0FvALQpqFMThhXE=</pre>
+Sec-Websocket-Accept: jjK3hEKqaFFtzqEJFQhDCDBnFjs=</pre>
       <br/><hr/>
       <h2>Closing Behavior</h2>
       <table>
@@ -276,11 +276,11 @@ Sec-Websocket-Accept: y1CW1jmrNJ9+0FvALQpqFMThhXE=</pre>
       <div id="wirelog">
          <pre class="wirelog_tx_octets">000 TX OCTETS: 474554202f777320485454502f312e310d0a557365722d4167656e743a204175746f6261686e5465737453756974652f302e</pre>
          <pre class="wirelog_tx_octets">               382e322d302e31302e390d0a486f ...</pre>
-         <pre class="wirelog_rx_octets">001 RX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205468752c203231204a75</pre>
-         <pre class="wirelog_rx_octets">               6c20323032322031353a35363a35 ...</pre>
-         <pre class="wirelog_tx_frame">002 TX FRAME : OPCODE=4, FIN=True, RSV=0, PAYLOAD-LEN=23, MASK=622ea5b6, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_rx_octets">001 RX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c203136204175</pre>
+         <pre class="wirelog_rx_octets">               6720323032322031313a33313a34 ...</pre>
+         <pre class="wirelog_tx_frame">002 TX FRAME : OPCODE=4, FIN=True, RSV=0, PAYLOAD-LEN=23, MASK=bafb3f92, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               reserved opcode payload</pre>
-         <pre class="wirelog_tx_octets">003 TX OCTETS: 8497622ea5b6104bd6d31058c0d24241d5d50d4ac096124fdcda0d4fc1</pre>
+         <pre class="wirelog_tx_octets">003 TX OCTETS: 8497bafb3f92c89e4cf7c88d5af69a944ff1d59f5ab2ca9a46fed59a5b</pre>
          <pre class="wirelog_kill_after">004 FAIL CONNECTION AFTER 1.000000 sec</pre>
          <pre class="wirelog_tcp_closed_by_peer">005 TCP DROPPED BY PEER</pre>
       </div>

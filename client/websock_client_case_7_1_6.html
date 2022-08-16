@@ -202,7 +202,7 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSocket Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSocket Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSocket">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSocket">                 </img></a></center>
       <br/>
-      <p class="case case_info">websock-client - <span style="font-size: 1.3em;"><b>Case 7.1.6</b></span> : Informational - <span style="font-size: 0.9em;"><b>99</b> ms @ 2022-07-21T17:20:11.065Z</a></p>
+      <p class="case case_info">websock-client - <span style="font-size: 1.3em;"><b>Case 7.1.6</b></span> : Informational - <span style="font-size: 0.9em;"><b>80</b> ms @ 2022-08-16T11:41:11.074Z</a></p>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 256K message followed by close then a ping</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Case outcome depends on implementation defined close behavior. Message and close frame are sent back to back. If the close frame is processed before the text message write is complete (as can happen in asynchronous processing models) the close frame is processed first and the text message may not be received or may only be partially recieved.</p>
 
@@ -220,14 +220,14 @@ Upgrade: websocket
 Host: 127.0.0.1:9001
 Connection: Upgrade
 Sec-Websocket-Version: 13
-Sec-Websocket-Key: gbZU4r1pp15zWLA1yFXq1w==
+Sec-Websocket-Key: XkU/vCcCgyqMoXT6+V+CGw==
 Cache-Control: no-cache</pre>
       <pre class="http_dump">HTTP/1.1 101 Switching Protocols
 Server: AutobahnTestSuite/0.8.2-0.10.9
 X-Powered-By: AutobahnPython/0.10.9
 Upgrade: WebSocket
 Connection: Upgrade
-Sec-WebSocket-Accept: jxEjlo2DJHlaXrrJqshCPi7TGw0=</pre>
+Sec-WebSocket-Accept: TNfdBIbpnfNXF301u/YG4gOe/bQ=</pre>
       <br/><hr/>
       <h2>Closing Behavior</h2>
       <table>
@@ -300,20 +300,20 @@ Sec-WebSocket-Accept: jxEjlo2DJHlaXrrJqshCPi7TGw0=</pre>
          <pre class="wirelog_tx_frame">008 TX FRAME : OPCODE=9, FIN=True, RSV=0, PAYLOAD-LEN=0, MASK=None, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_octets">009 TX OCTETS: 8900</pre>
          <pre class="wirelog_kill_after">010 FAIL CONNECTION AFTER 1.000000 sec</pre>
-         <pre class="wirelog_rx_octets">011 RX OCTETS: 81ff0000000000040000b7dd231ef59c507a80fb497685ee615fc4b91438ddb5112df59c507a80fb497685ee615fc4b91438</pre>
-         <pre class="wirelog_rx_octets">               ddb5112df59c507a80fb497685ee ...</pre>
-         <pre class="wirelog_rx_octets">012 RX OCTETS: 507a80fb497685ee615fc4b91438ddb5112df59c507a80fb497685ee615fc4b91438ddb5112df59c507a80fb497685ee615f</pre>
-         <pre class="wirelog_rx_octets">               c4b91438ddb5112df59c507a80fb ...</pre>
-         <pre class="wirelog_rx_octets">013 RX OCTETS: 112df59c507a80fb497685ee615fc4b91438ddb5112df59c507a80fb497685ee615fc4b91438ddb5112df59c507a80fb4976</pre>
-         <pre class="wirelog_rx_octets">               85ee615fc4b91438ddb5112df59c ...</pre>
-         <pre class="wirelog_rx_octets">014 RX OCTETS: 1438ddb5112df59c507a80fb497685ee615fc4b91438ddb5112df59c507a80fb497685ee615fc4b91438ddb5112df59c507a</pre>
-         <pre class="wirelog_rx_octets">               80fb497685ee615fc4b91438ddb5 ...</pre>
-         <pre class="wirelog_rx_octets">015 RX OCTETS: 615fc4b91438ddb5112df59c507a818c4376e97c0b1385102c56be13311a8d5d888288fa46af8b12</pre>
-         <pre class="wirelog_rx_frame">016 RX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=262144, MASKED=True, MASK=6237646432333165</pre>
+         <pre class="wirelog_rx_octets">011 RX OCTETS: 81ff0000000000040000c1f88e3283b9fd56f6dee45af3cbcc73b29cb914ab90bc0183b9fd56f6dee45af3cbcc73b29cb914</pre>
+         <pre class="wirelog_rx_octets">               ab90bc0183b9fd56f6dee45af3cb ...</pre>
+         <pre class="wirelog_rx_octets">012 RX OCTETS: fd56f6dee45af3cbcc73b29cb914ab90bc0183b9fd56f6dee45af3cbcc73b29cb914ab90bc0183b9fd56f6dee45af3cbcc73</pre>
+         <pre class="wirelog_rx_octets">               b29cb914ab90bc0183b9fd56f6de ...</pre>
+         <pre class="wirelog_rx_octets">013 RX OCTETS: bc0183b9fd56f6dee45af3cbcc73b29cb914ab90bc0183b9fd56f6dee45af3cbcc73b29cb914ab90bc0183b9fd56f6dee45a</pre>
+         <pre class="wirelog_rx_octets">               f3cbcc73b29cb914ab90bc0183b9 ...</pre>
+         <pre class="wirelog_rx_octets">014 RX OCTETS: b914ab90bc0183b9fd56f6dee45af3cbcc73b29cb914ab90bc0183b9fd56f6dee45af3cbcc73b29cb914ab90bc0183b9fd56</pre>
+         <pre class="wirelog_rx_octets">               f6dee45af3cbcc73b29cb914ab90 ...</pre>
+         <pre class="wirelog_rx_octets">015 RX OCTETS: cc73b29cb914ab90bc0183b9fd56818c52233af71a46569b3d036d98204f5ed68882a6a020e3a548</pre>
+         <pre class="wirelog_rx_frame">016 RX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=262144, MASKED=True, MASK=6331663838653332</pre>
          <pre class="wirelog_rx_frame">               BAsd7&jh23BAsd7&jh23BAsd7&jh23BAsd7&jh23BAsd7&jh23BAsd7&jh23BAsd ...</pre>
-         <pre class="wirelog_rx_frame">017 RX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=12, MASKED=True, MASK=3433373665393763</pre>
+         <pre class="wirelog_rx_frame">017 RX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=12, MASKED=True, MASK=3532323333616637</pre>
          <pre class="wirelog_rx_frame">               Hello World!</pre>
-         <pre class="wirelog_rx_frame">018 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=True, MASK=3838666134366166</pre>
+         <pre class="wirelog_rx_frame">018 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=True, MASK=6136613032306533</pre>
          <pre class="wirelog_rx_frame">               0x03e8</pre>
          <pre class="wirelog_tcp_closed_by_me">019 TCP DROPPED BY ME</pre>
       </div>

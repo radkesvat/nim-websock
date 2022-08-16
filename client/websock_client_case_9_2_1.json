@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send binary message message with payload of length 64 * 2**10 (64k).",
    "droppedByMe": true,
-   "duration": 4,
+   "duration": 2,
    "expectation": "Receive echo'ed binary message (with payload as sent).",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=253&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: RHpV+E26gJcPI+wXZBDVFQ==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: F0LX6Fqu4Cp8QnroPExiw7Cr/vw=\r\n\r\n",
+   "httpRequest": "GET /runCase?case=253&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: 2C8tbBTxHZHayLDRz3siZg==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: wE8CvIo/3Ii6GsHJKnmWm2nDbhs=\r\n\r\n",
    "id": "9.2.1",
    "isServer": true,
    "localCloseCode": 1000,
@@ -42,7 +42,7 @@
       "288": 1,
       "65536": 1
    },
-   "started": "2022-07-21T17:20:22.036Z",
+   "started": "2022-08-16T11:41:20.167Z",
    "trafficStats": null,
    "txFrameStats": {
       "2": 1,
@@ -104,7 +104,7 @@
          "RO",
          [
             8,
-            "888237af7f3d3447"
+            "888242c91eee4121"
          ]
       ],
       [
@@ -117,7 +117,7 @@
          true,
          0,
          true,
-         "37af7f3d"
+         "42c91eee"
       ]
    ]
 }

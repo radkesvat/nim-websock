@@ -202,7 +202,7 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSocket Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSocket Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSocket">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSocket">                 </img></a></center>
       <br/>
-      <p class="case case_ok">websock server - <span style="font-size: 1.3em;"><b>Case 9.2.6</b></span> : Pass - <span style="font-size: 0.9em;"><b>593</b> ms @ 2022-07-21T15:57:18.788Z</a></p>
+      <p class="case case_ok">websock server - <span style="font-size: 1.3em;"><b>Case 9.2.6</b></span> : Pass - <span style="font-size: 0.9em;"><b>589</b> ms @ 2022-08-16T11:32:06.213Z</a></p>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send binary message message with payload of length 16 * 2**20 (16M).</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed binary message (with payload as sent).</p>
 
@@ -221,13 +221,13 @@ Upgrade: WebSocket
 Connection: Upgrade
 Pragma: no-cache
 Cache-Control: no-cache
-Sec-WebSocket-Key: vqZGMCSzmJFUMOvzd/YC1g==
+Sec-WebSocket-Key: iyy6ahhKuB/dXZ6nrFgntg==
 Sec-WebSocket-Version: 13</pre>
       <pre class="http_dump">HTTP/1.1 101 Switching Protocols
-Date: Thu, 21 Jul 2022 15:57:18 GMT
+Date: Tue, 16 Aug 2022 11:32:06 GMT
 Upgrade: websocket
 Connection: Upgrade
-Sec-Websocket-Accept: 4ziCm/QPwhiB1Yht1P/rwCrGzro=</pre>
+Sec-Websocket-Accept: vpREKAbzE7RqvmHG+UfKoM3sJrE=</pre>
       <br/><hr/>
       <h2>Closing Behavior</h2>
       <table>
@@ -251,18 +251,9 @@ Sec-Websocket-Accept: 4ziCm/QPwhiB1Yht1P/rwCrGzro=</pre>
       <table>
          <tr class="stats_header"><td>Chop Size</td><td>Count</td><td>Octets</td></tr>
          <tr class="stats_row"><td>4</td><td>1</td><td>4</td></tr>
-         <tr class="stats_row"><td>10</td><td>12</td><td>120</td></tr>
+         <tr class="stats_row"><td>10</td><td>16</td><td>160</td></tr>
          <tr class="stats_row"><td>166</td><td>1</td><td>166</td></tr>
-         <tr class="stats_row"><td>275</td><td>1</td><td>275</td></tr>
-         <tr class="stats_row"><td>646</td><td>1</td><td>646</td></tr>
-         <tr class="stats_row"><td>752</td><td>1</td><td>752</td></tr>
-         <tr class="stats_row"><td>805</td><td>1</td><td>805</td></tr>
-         <tr class="stats_row"><td>64794</td><td>1</td><td>64794</td></tr>
-         <tr class="stats_row"><td>64847</td><td>1</td><td>64847</td></tr>
-         <tr class="stats_row"><td>64900</td><td>1</td><td>64900</td></tr>
-         <tr class="stats_row"><td>65271</td><td>1</td><td>65271</td></tr>
-         <tr class="stats_row"><td>65483</td><td>2</td><td>130966</td></tr>
-         <tr class="stats_row"><td>65536</td><td>250</td><td>16384000</td></tr>
+         <tr class="stats_row"><td>65536</td><td>256</td><td>16777216</td></tr>
          <tr class="stats_total"><td>Total</td><td>274</td><td>16777546</td></tr>
       </table>
       <h3>Octets Transmitted by Chop Size</h3>
@@ -293,12 +284,12 @@ Sec-Websocket-Accept: 4ziCm/QPwhiB1Yht1P/rwCrGzro=</pre>
       <div id="wirelog">
          <pre class="wirelog_tx_octets">000 TX OCTETS: 474554202f777320485454502f312e310d0a557365722d4167656e743a204175746f6261686e5465737453756974652f302e</pre>
          <pre class="wirelog_tx_octets">               382e322d302e31302e390d0a486f ...</pre>
-         <pre class="wirelog_rx_octets">001 RX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205468752c203231204a75</pre>
-         <pre class="wirelog_rx_octets">               6c20323032322031353a35373a31 ...</pre>
+         <pre class="wirelog_rx_octets">001 RX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a446174653a205475652c203136204175</pre>
+         <pre class="wirelog_rx_octets">               6720323032322031313a33323a30 ...</pre>
          <pre class="wirelog_kill_after">002 CLOSE CONNECTION AFTER 100.000000 sec</pre>
-         <pre class="wirelog_tx_frame">003 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASK=39a00ce0, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_frame">003 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASK=96ba16eb, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               0x03e8</pre>
-         <pre class="wirelog_tx_octets">004 TX OCTETS: 888239a00ce03a48</pre>
+         <pre class="wirelog_tx_octets">004 TX OCTETS: 888296ba16eb9552</pre>
          <pre class="wirelog_rx_octets">005 RX OCTETS: 880203e8</pre>
          <pre class="wirelog_rx_frame">006 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=False, MASK=None</pre>
          <pre class="wirelog_rx_frame">               0x03e8</pre>

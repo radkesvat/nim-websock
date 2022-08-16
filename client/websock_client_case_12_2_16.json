@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send 1000 compressed messages each of payload size 131072, auto-fragment to 1024 octets. Use default permessage-deflate offer.",
    "droppedByMe": true,
-   "duration": 23055,
+   "duration": 21809,
    "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET /runCase?case=335&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: TCPcyal9TO5DAHUor6/ssA==\r\nCache-Control: no-cache\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: 9FRVXKQJf1wbwY6G/PI2aSuw6nc=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
+   "httpRequest": "GET /runCase?case=335&agent=websock-client HTTP/1.1\r\nSec-Websocket-Extensions: permessage-deflate; client_max_window_bits=15\r\nUpgrade: websocket\r\nHost: 127.0.0.1:9001\r\nConnection: Upgrade\r\nSec-Websocket-Version: 13\r\nSec-Websocket-Key: Xlau188zPE0ZUrJ5DyPdfQ==\r\nCache-Control: no-cache\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.2-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: L6K3bNb2/MOznMHzHgRNglsKEvY=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
    "id": "12.2.16",
    "isServer": true,
    "localCloseCode": 1000,
@@ -63,7 +63,6 @@
       "42671": 1,
       "42672": 1,
       "42673": 1,
-      "42675": 1,
       "42677": 2,
       "42684": 1,
       "42685": 1,
@@ -77,8 +76,10 @@
       "42704": 1,
       "42706": 1,
       "42714": 1,
+      "42719": 1,
       "42724": 1,
       "42727": 1,
+      "42728": 1,
       "42730": 1,
       "42734": 1,
       "42740": 1,
@@ -87,7 +88,6 @@
       "42747": 2,
       "42749": 1,
       "42755": 2,
-      "42772": 1,
       "42773": 1,
       "42774": 1,
       "42778": 1,
@@ -160,6 +160,7 @@
       "42961": 1,
       "42964": 1,
       "42965": 1,
+      "42976": 1,
       "42977": 1,
       "42979": 3,
       "42980": 1,
@@ -174,7 +175,6 @@
       "43012": 1,
       "43017": 1,
       "43019": 1,
-      "43029": 1,
       "43051": 2,
       "43058": 1,
       "43063": 1,
@@ -424,8 +424,8 @@
       "45250": 1,
       "45291": 2,
       "45303": 1,
+      "45331": 1,
       "45371": 1,
-      "45384": 1,
       "45394": 1,
       "45413": 1,
       "45414": 1,
@@ -485,8 +485,8 @@
       "46409": 1,
       "46430": 1,
       "46431": 1,
+      "46447": 1,
       "46480": 1,
-      "46500": 1,
       "46510": 1,
       "46511": 1,
       "46532": 1,
@@ -503,10 +503,10 @@
       "46737": 1,
       "46739": 1,
       "46744": 1,
+      "46775": 1,
       "46796": 1,
       "46817": 1,
       "46827": 1,
-      "46828": 1,
       "46847": 1,
       "46850": 1,
       "46864": 1,
@@ -657,7 +657,6 @@
       "48500": 1,
       "48502": 1,
       "48507": 1,
-      "48509": 1,
       "48511": 1,
       "48513": 1,
       "48514": 1,
@@ -680,7 +679,7 @@
       "48556": 1,
       "48558": 1,
       "48559": 1,
-      "48562": 1,
+      "48562": 2,
       "48564": 1,
       "48565": 2,
       "48566": 1,
@@ -853,10 +852,10 @@
       "49117": 2,
       "49120": 1,
       "49230": 1,
-      "65483": 5,
-      "65536": 995
+      "65483": 2,
+      "65536": 998
    },
-   "started": "2022-07-21T17:28:29.679Z",
+   "started": "2022-08-16T11:48:08.375Z",
    "trafficStats": {
       "incomingCompressionRatio": 0.8504757537841797,
       "incomingOctetsAppLevel": 131072000,
@@ -1541,7 +1540,7 @@
          "RO",
          [
             8,
-            "888207643dd8048c"
+            "888269f4acda6a1c"
          ]
       ],
       [
@@ -1554,7 +1553,7 @@
          true,
          0,
          true,
-         "07643dd8"
+         "69f4acda"
       ]
    ]
 }
